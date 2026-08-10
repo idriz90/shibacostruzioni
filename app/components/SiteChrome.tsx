@@ -1,5 +1,6 @@
 import { basePath } from "../basePath";
 import { CookieSettingsButton } from "./CookieNotice";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const siteUrl = (path: string) => `${basePath}${path}`;
 
@@ -12,7 +13,7 @@ export function SiteHeader() {
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/blog/")}>Blog</a>
         </nav>
-        <a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a>
+        <div className="header-actions"><a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a><LanguageSwitcher /></div>
         <details className="mobile-menu"><summary aria-label="Apri il menu">Menu</summary><nav aria-label="Navigazione mobile">
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/blog/")}>Blog</a><a href={siteUrl("/contatti/")}>Contatti</a>
         </nav></details>

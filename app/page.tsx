@@ -2,6 +2,7 @@ import { basePath } from "./basePath";
 import { CookieSettingsButton } from "./components/CookieNotice";
 import { FloatingContacts } from "./components/SiteChrome";
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -70,7 +71,7 @@ export default function Home() {
           <a href={url("/chi-siamo/")}>Chi siamo</a>
           <a href={url("/blog/")}>Blog</a>
         </nav>
-        <a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a>
+        <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a><LanguageSwitcher /></div>
         <details className="mobile-menu">
           <summary aria-label="Apri il menu">Menu</summary>
           <nav aria-label="Navigazione mobile">
@@ -134,12 +135,11 @@ export default function Home() {
         </section>
 
         <section className="projects section" id="progetti">
-          <div className="section-heading split-heading">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">Prima e dopo</p>
-              <h2>Il cambiamento<br />si vede.</h2>
+              <h2>Il cambiamento che<br />si vede.</h2>
             </div>
-            <p>Due interventi reali raccontano meglio di tante parole la cura che mettiamo nel lavoro.</p>
           </div>
 
           <article className="project-case">
