@@ -176,6 +176,11 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .values-grid span, .process-list span { color: var(--green); font-weight: 850; }
 .values-grid h3 { margin: auto 0 18px; font-size: 30px; }
 .values-grid p { margin: 0; color: var(--muted); line-height: 1.6; }
+.values-flow { position: relative; }
+.values-flow::before { content: ""; position: absolute; z-index: 2; top: calc(clamp(72px, 7vw, 108px) + 39px); left: calc(max(5vw, calc((100vw - 1180px)/2)) + 44px); right: calc(max(5vw, calc((100vw - 1180px)/2)) + 48px); border-top: 2px dashed rgba(44,173,130,.7); pointer-events: none; }
+.values-flow::after { content: ""; position: absolute; z-index: 3; top: calc(clamp(72px, 7vw, 108px) + 34px); right: calc(max(5vw, calc((100vw - 1180px)/2)) + 45px); width: 10px; height: 10px; border-top: 2px solid var(--green); border-right: 2px solid var(--green); transform: rotate(45deg); pointer-events: none; }
+.values-flow article { position: relative; z-index: 1; }
+.values-flow article > span { position: relative; z-index: 4; align-self: flex-start; padding: 0 8px; margin-left: -8px; background: var(--white); }
 .cta-band { padding: 70px 7vw; display: flex; justify-content: space-between; align-items: center; gap: 35px; background: var(--yellow); }
 .cta-band h2 { max-width: 800px; font-size: clamp(38px,5vw,70px); }
 .cta-band .button { background: var(--ink); color: white; white-space: nowrap; }
@@ -266,6 +271,8 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .two-columns, .values-grid, .article-grid { grid-template-columns: 1fr; }
   .rich-copy { padding-top: 0; }
   .values-grid article { min-height: 260px; }
+  .values-flow::before { top: 108px; bottom: 108px; left: 61px; right: auto; border-top: 0; border-left: 2px dashed rgba(44,173,130,.7); }
+  .values-flow::after { top: auto; right: auto; bottom: 104px; left: 56px; transform: rotate(135deg); }
   .cta-band { align-items: flex-start; flex-direction: column; padding: 58px 22px; }
   .project-cta { min-height: 140px; padding: 18px 22px; flex-direction: row; align-items: center; }
   .project-cta h2 { font-size: clamp(28px, 8vw, 36px); }
