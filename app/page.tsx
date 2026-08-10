@@ -1,3 +1,7 @@
+import { basePath } from "./basePath";
+
+const url = (path: string) => `${basePath}${path}`;
+
 const services = [
   {
     number: "01",
@@ -61,32 +65,32 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
-          <img src="/images/logo-shiba.webp" alt="Shiba Costruzioni" />
+          <img src={url("/images/logo-shiba.webp")} alt="Shiba Costruzioni" />
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
-          <a href="/chi-siamo">Chi siamo</a>
-          <a href="/servizi">Servizi</a>
-          <a href="/progetti">Progetti</a>
-          <a href="/come-lavoriamo">Come lavoriamo</a>
-          <a href="/blog">Blog</a>
+          <a href={url("/chi-siamo/")}>Chi siamo</a>
+          <a href={url("/servizi/")}>Servizi</a>
+          <a href={url("/progetti/")}>Progetti</a>
+          <a href={url("/come-lavoriamo/")}>Come lavoriamo</a>
+          <a href={url("/blog/")}>Blog</a>
         </nav>
-        <a className="button button-small" href="#contatti">Richiedi un sopralluogo</a>
+        <a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo</a>
         <details className="mobile-menu">
           <summary aria-label="Apri il menu">Menu</summary>
           <nav aria-label="Navigazione mobile">
-            <a href="/chi-siamo">Chi siamo</a>
-            <a href="/servizi">Servizi</a>
-            <a href="/progetti">Progetti</a>
-            <a href="/come-lavoriamo">Come lavoriamo</a>
-            <a href="/blog">Blog</a>
-            <a href="/contatti">Contatti</a>
+            <a href={url("/chi-siamo/")}>Chi siamo</a>
+            <a href={url("/servizi/")}>Servizi</a>
+            <a href={url("/progetti/")}>Progetti</a>
+            <a href={url("/come-lavoriamo/")}>Come lavoriamo</a>
+            <a href={url("/blog/")}>Blog</a>
+            <a href={url("/contatti/")}>Contatti</a>
           </nav>
         </details>
       </header>
 
       <main id="inizio">
         <section className="hero">
-          <img className="hero-image" src="/images/pisa-hero.jpg" alt="Veduta di Pisa, territorio in cui opera Shiba Costruzioni" />
+          <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Shiba Costruzioni" />
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow light">Costruiamo valore, proteggiamo ciò che conta</p>
@@ -97,7 +101,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button" href="#contatti">Richiedi un preventivo</a>
-              <a className="text-link light-link" href="/progetti">Guarda i lavori <span>↘</span></a>
+              <a className="text-link light-link" href={url("/progetti/")}>Guarda i lavori <span>↘</span></a>
             </div>
           </div>
           <div className="hero-proof">
@@ -117,7 +121,7 @@ export default function Home() {
               profonda degli edifici toscani. Dal primo sopralluogo alla consegna sarete seguiti
               direttamente dal titolare, con comunicazione trasparente e soluzioni su misura.
             </p>
-            <a className="text-link" href="/come-lavoriamo">Scopri il nostro metodo <span>→</span></a>
+            <a className="text-link" href={url("/come-lavoriamo/")}>Scopri il nostro metodo <span>→</span></a>
           </div>
         </section>
 
@@ -132,7 +136,7 @@ export default function Home() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <a href="/contatti" aria-label={`Richiedi informazioni su ${service.title}`}>Parliamone →</a>
+                <a href={url("/contatti/")} aria-label={`Richiedi informazioni su ${service.title}`}>Parliamone →</a>
               </article>
             ))}
           </div>
@@ -153,8 +157,8 @@ export default function Home() {
               <div><h3>Ristrutturazione bagno</h3><p>Demolizione, nuovi impianti e finiture contemporanee.</p></div>
             </div>
             <div className="before-after">
-              <figure><img src="/images/bagno-prima.jpeg" alt="Bagno prima della ristrutturazione" /><figcaption>Prima</figcaption></figure>
-              <figure><img src="/images/bagno-dopo.jpeg" alt="Bagno completato dopo la ristrutturazione" /><figcaption>Dopo</figcaption></figure>
+              <figure><img src={url("/images/bagno-prima.jpeg")} alt="Bagno prima della ristrutturazione" /><figcaption>Prima</figcaption></figure>
+              <figure><img src={url("/images/bagno-dopo.jpeg")} alt="Bagno completato dopo la ristrutturazione" /><figcaption>Dopo</figcaption></figure>
             </div>
           </article>
 
@@ -164,8 +168,8 @@ export default function Home() {
               <div><h3>Nuova zona giorno</h3><p>Spazi, impianti e superfici trasformati per una casa più luminosa.</p></div>
             </div>
             <div className="before-after">
-              <figure><img src="/images/soggiorno-prima.jpeg" alt="Zona giorno durante la ristrutturazione" /><figcaption>Prima</figcaption></figure>
-              <figure><img src="/images/soggiorno-dopo.jpeg" alt="Zona giorno rinnovata con nuova cucina" /><figcaption>Dopo</figcaption></figure>
+              <figure><img src={url("/images/soggiorno-prima.jpeg")} alt="Zona giorno durante la ristrutturazione" /><figcaption>Prima</figcaption></figure>
+              <figure><img src={url("/images/soggiorno-dopo.jpeg")} alt="Zona giorno rinnovata con nuova cucina" /><figcaption>Dopo</figcaption></figure>
             </div>
           </article>
         </section>
@@ -247,14 +251,14 @@ export default function Home() {
       </main>
 
       <footer>
-        <img src="/images/logo-shiba.webp" alt="Shiba Costruzioni" />
+        <img src={url("/images/logo-shiba.webp")} alt="Shiba Costruzioni" />
         <div><strong>Shiba Costruzioni</strong><span>P. IVA 02226750509</span></div>
         <nav aria-label="Collegamenti legali"><a href="#">Privacy</a><a href="#">Cookie</a></nav>
         <span>© {new Date().getFullYear()} Shiba Costruzioni</span>
       </footer>
 
       <div className="mobile-actions" aria-label="Azioni rapide">
-        <a href="tel:+393420926964">Chiama</a><a href="#contatti">Preventivo</a>
+        <a href="tel:+393420926964">Chiama</a><a href={url("/contatti/")}>Preventivo</a>
       </div>
     </>
   );

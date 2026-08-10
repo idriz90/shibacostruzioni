@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = { title: "Servizi edili e ristrutturazioni", description: "Ristrutturazioni, bagni, tetti, facciate, impermeabilizzazioni e consolidamento strutturale a Pisa e in Toscana." };
 const items = [
@@ -11,6 +11,6 @@ const items = [
   ["Edilizia commerciale", "Continuità per l’attività", "Manutenzioni, adeguamenti e interventi per negozi, magazzini e immobili a uso commerciale."],
 ];
 export default function Servizi() { return <><SiteHeader /><main><PageHero eyebrow="I nostri servizi" title="Una soluzione precisa per ogni edificio." text="Dal piccolo intervento alla ristrutturazione completa, affrontiamo ogni lavoro partendo dalle reali condizioni dell’immobile." />
-  <section className="service-list content-section">{items.map(([title,kicker,text],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><div><p>{kicker}</p><h2>{title}</h2></div><p>{text}</p><a href="/contatti">Richiedi informazioni →</a></article>)}</section>
-  <section className="cta-band"><h2>Serve un sopralluogo?</h2><a className="button" href="/contatti">Richiedi un preventivo</a></section>
+  <section className="service-list content-section">{items.map(([title,kicker,text],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><div><p>{kicker}</p><h2>{title}</h2></div><p>{text}</p><a href={siteUrl("/contatti/")}>Richiedi informazioni →</a></article>)}</section>
+  <section className="cta-band"><h2>Serve un sopralluogo?</h2><a className="button" href={siteUrl("/contatti/")}>Richiedi un preventivo</a></section>
   </main><SiteFooter /></>; }
