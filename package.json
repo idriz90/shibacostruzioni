@@ -5,6 +5,14 @@
   "engines": {
     "node": ">=22.13.0"
   },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ]
+  },
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
