@@ -16,6 +16,6 @@ export function ProjectsContent() {
         <BeforeAfterSlider before={siteUrl(before)} after={siteUrl(after)} beforeAlt={beforeAlt} afterAlt={afterAlt} imagePosition={index === 2 ? "center 25%" : undefined} />
       </article>)}
     </section>
-    <section className="cta-band"><h2>Il prossimo progetto può essere il tuo.</h2><a className="button" href={siteUrl("/contatti/")}>Contattaci</a></section>
+    <section className="cta-band project-cta"><h2>Il prossimo progetto può essere il tuo.</h2><a className="button" href={siteUrl("/contatti/")}>Contattaci</a></section>
   </main>;
 }
