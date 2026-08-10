@@ -1,5 +1,6 @@
 import { basePath } from "./basePath";
 import { CookieSettingsButton } from "./components/CookieNotice";
+import { FloatingContacts } from "./components/SiteChrome";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -128,7 +129,6 @@ export default function Home() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <a href={url("/contatti/")} aria-label={`Richiedi informazioni su ${service.title}`}>Parliamone →</a>
               </article>
             ))}
           </div>
@@ -175,9 +175,7 @@ export default function Home() {
         <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Costruzioni Edili Shiba</span></div>
       </footer>
 
-      <div className="mobile-actions" aria-label="Azioni rapide">
-        <a href="tel:+393420926964">Chiama</a><a href={url("/contatti/")}>Preventivo</a>
-      </div>
+      <FloatingContacts />
     </>
   );
 }

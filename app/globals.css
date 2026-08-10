@@ -58,8 +58,7 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .service-card { min-height: 260px; padding: 32px; display: flex; flex-direction: column; background: var(--white); border: 1px solid rgba(29,48,42,.1); border-radius: 14px; box-shadow: 0 10px 30px rgba(29,48,42,.035); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .service-card > span { color: var(--green); font-size: 13px; font-weight: 800; }
 .service-card h3 { margin: 48px 0 14px; font-size: clamp(24px, 2.2vw, 32px); line-height: 1.1; letter-spacing: -.025em; }
-.service-card p { max-width: 470px; min-height: 0; margin: 0 0 26px; color: var(--muted); line-height: 1.6; }
-.service-card a { margin-top: auto; color: #187b60; font-weight: 700; font-size: 14px; }
+.service-card p { max-width: 470px; min-height: 0; margin: 0; color: var(--muted); line-height: 1.6; }
 .service-card:hover { transform: translateY(-3px); border-color: rgba(44,173,130,.4); box-shadow: 0 16px 38px rgba(29,48,42,.08); }
 
 .split-heading { display: grid; grid-template-columns: 1fr 390px; gap: 50px; align-items: end; }
@@ -116,7 +115,14 @@ footer nav { display: flex; gap: 20px; }
 .footer-link-button { appearance: none; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .footer-bottom { grid-column: 2 / -1; padding-top: 24px; display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid rgba(255,255,255,.16); }
-.mobile-actions { display: none; }
+.floating-contacts { position: fixed; z-index: 35; right: 0; top: 52%; display: flex; align-items: flex-end; flex-direction: column; gap: 8px; transform: translateY(-50%); }
+.floating-contacts a { min-width: 54px; min-height: 52px; padding: 0 13px; display: flex; align-items: center; justify-content: flex-start; gap: 10px; color: white; border-radius: 12px 0 0 12px; box-shadow: 0 8px 24px rgba(20,39,33,.18); transition: min-width .2s ease, transform .2s ease; }
+.floating-contacts a:hover { min-width: 132px; transform: translateX(0); }
+.floating-contacts span { width: 28px; flex: 0 0 28px; text-align: center; font-size: 16px; font-weight: 850; }
+.floating-contacts b { font-size: 12px; font-weight: 750; white-space: nowrap; }
+.quick-call { background: #246b91; }
+.quick-whatsapp { background: #25a866; }
+.quick-email { background: #ad8242; }
 
 .legal-page { max-width: 1060px; margin: 0 auto; }
 .legal-page section { padding: 0 0 42px; margin-bottom: 42px; border-bottom: 1px solid #d8dcd8; }
@@ -213,9 +219,11 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   footer { grid-template-columns: 1fr; padding: 48px 22px 105px; gap: 30px; }
   .footer-bottom { grid-column: 1; align-items: flex-start; flex-direction: column; }
   .cookie-notice { right: 14px; bottom: 80px; width: calc(100vw - 28px); padding: 20px; align-items: stretch; flex-direction: column; gap: 16px; }
-  .mobile-actions { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; padding: 8px; background: white; box-shadow: 0 -7px 25px rgba(0,0,0,.12); }
-  .mobile-actions a { min-height: 48px; display: flex; align-items: center; justify-content: center; font-weight: 850; }
-  .mobile-actions a:last-child { background: var(--yellow); }
+  .floating-contacts { top: auto; right: 8px; bottom: 88px; gap: 7px; transform: none; }
+  .floating-contacts a { min-width: 48px; width: 48px; min-height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
+  .floating-contacts a:hover { min-width: 48px; }
+  .floating-contacts span { width: auto; flex-basis: auto; }
+  .floating-contacts b { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .page-hero { min-height: 420px; padding: 82px 22px 58px; }
   .page-hero h1 { font-size: clamp(44px,14vw,66px); }
   .page-hero > p:last-child { font-size: 17px; }

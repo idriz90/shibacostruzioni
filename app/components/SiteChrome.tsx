@@ -35,9 +35,17 @@ export function SiteFooter() {
         </div>
         <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={siteUrl("/privacy/")}>Privacy</a><a href={siteUrl("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Costruzioni Edili Shiba</span></div>
       </footer>
-      <div className="mobile-actions" aria-label="Azioni rapide"><a href="tel:+393420926964">Chiama</a><a href={siteUrl("/contatti/")}>Preventivo</a></div>
+      <FloatingContacts />
     </>
   );
+}
+
+export function FloatingContacts() {
+  return <nav className="floating-contacts" aria-label="Contatti rapidi">
+    <a className="quick-call" href="tel:+393420926964" aria-label="Chiama Costruzioni Edili Shiba"><span aria-hidden="true">☎</span><b>Chiama</b></a>
+    <a className="quick-whatsapp" href="https://wa.me/393420926964" target="_blank" rel="noreferrer" aria-label="Scrivi su WhatsApp"><span aria-hidden="true">WA</span><b>WhatsApp</b></a>
+    <a className="quick-email" href="mailto:info@shibacostruzioni.it" aria-label="Invia una email"><span aria-hidden="true">@</span><b>Email</b></a>
+  </nav>;
 }
 
 export function PageHero({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
