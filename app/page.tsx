@@ -56,7 +56,7 @@ export default function Home() {
       />
 
       <div className="announcement">
-        <span>La risposta professionale dell&apos;edilizia</span>
+        <span>La risposta professionale nell&apos;edilizia</span>
       </div>
 
       <header className="site-header">
@@ -118,22 +118,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services section" id="servizi">
-          <div className="section-heading">
-            <p className="eyebrow">I nostri servizi</p>
-            <h2>Soluzioni solide.<br />Dalla struttura alle finiture.</h2>
-          </div>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.number}>
-                <span>{service.number}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="projects section" id="progetti">
           <div className="section-heading">
             <div>
@@ -148,6 +132,22 @@ export default function Home() {
             </div>
             <BeforeAfterSlider before={url("/images/soggiorno-prima.jpeg")} after={url("/images/soggiorno-dopo.jpeg")} beforeAlt="Zona giorno durante la ristrutturazione" afterAlt="Zona giorno rinnovata con nuova cucina" initialPosition={30} />
           </article>
+        </section>
+
+        <section className="services section" id="servizi">
+          <div className="section-heading">
+            <p className="eyebrow">I nostri servizi</p>
+            <h2>Soluzioni solide.<br />Dalla struttura alle finiture.</h2>
+          </div>
+          <div className="service-grid">
+            {services.map((service) => (
+              <article className="service-card" key={service.number}>
+                <span>{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
       </main>

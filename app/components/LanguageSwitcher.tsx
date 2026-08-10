@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const translations: Record<string, string> = {
-  "La risposta professionale dell'edilizia": "The professional answer in construction",
+  "La risposta professionale nell'edilizia": "The professional answer in construction",
   "anni sul territorio": "years in the area",
   "Servizi": "Services", "Progetti": "Projects", "Chi siamo": "About us", "Contatti": "Contact",
   "Richiedi un sopralluogo gratuito": "Request a free site inspection", "Menu": "Menu",
