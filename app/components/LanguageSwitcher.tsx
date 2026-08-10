@@ -115,10 +115,10 @@ export function LanguageSwitcher() {
   };
 
   return <details className="language-menu" ref={detailsRef} data-no-translate>
-    <summary aria-label="Seleziona lingua"><span aria-hidden="true">{language === "it" ? "🇮🇹" : "🇬🇧"}</span></summary>
+    <summary aria-label="Seleziona lingua"><span className={`flag-icon flag-${language}`} aria-hidden="true" /></summary>
     <div>
-      <button type="button" aria-pressed={language === "it"} onClick={() => choose("it")}><span aria-hidden="true">🇮🇹</span> Italiano</button>
-      <button type="button" aria-pressed={language === "en"} onClick={() => choose("en")}><span aria-hidden="true">🇬🇧</span> English</button>
+      <button type="button" aria-pressed={language === "it"} onClick={() => choose("it")}><span className="flag-icon flag-it" aria-hidden="true" /> Italiano</button>
+      <button type="button" aria-pressed={language === "en"} onClick={() => choose("en")}><span className="flag-icon flag-en" aria-hidden="true" /> English</button>
     </div>
   </details>;
 }

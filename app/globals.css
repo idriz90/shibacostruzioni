@@ -31,11 +31,15 @@ button, input, textarea, select { font: inherit; }
 .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 9px; }
 .header-actions > .button-small { white-space: nowrap; }
 .language-menu { position: relative; }
-.language-menu summary { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(29,48,42,.16); border-radius: 8px; background: white; font-size: 22px; list-style: none; cursor: pointer; }
+.language-menu summary { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(29,48,42,.16); border-radius: 8px; background: white; list-style: none; cursor: pointer; }
 .language-menu summary::-webkit-details-marker { display: none; }
 .language-menu > div { position: absolute; z-index: 45; top: 52px; right: 0; width: 150px; padding: 7px; display: flex; flex-direction: column; gap: 4px; border: 1px solid rgba(29,48,42,.12); border-radius: 9px; background: white; box-shadow: 0 14px 38px rgba(20,39,33,.18); }
 .language-menu button { padding: 10px; border: 0; border-radius: 6px; background: transparent; color: var(--ink); text-align: left; font-weight: 700; cursor: pointer; }
 .language-menu button:hover, .language-menu button[aria-pressed="true"] { background: var(--cream); }
+.flag-icon { width: 26px; height: 18px; display: inline-block; flex: 0 0 auto; margin-right: 7px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.16); vertical-align: middle; }
+.language-menu summary .flag-icon { margin-right: 0; }
+.flag-it { background: linear-gradient(90deg, #009246 0 33.333%, #fff 33.333% 66.666%, #ce2b37 66.666%); }
+.flag-en { background-color: #012169; background-image: linear-gradient(33deg, transparent 43%, #fff 43% 57%, transparent 57%), linear-gradient(-33deg, transparent 43%, #fff 43% 57%, transparent 57%), linear-gradient(33deg, transparent 48%, #c8102e 48% 52%, transparent 52%), linear-gradient(-33deg, transparent 48%, #c8102e 48% 52%, transparent 52%), linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%), linear-gradient(0deg, transparent 34%, #fff 34% 66%, transparent 66%), linear-gradient(90deg, transparent 44%, #c8102e 44% 56%, transparent 56%), linear-gradient(0deg, transparent 41%, #c8102e 41% 59%, transparent 59%); }
 .mobile-menu { display: none; }
 
 .hero { position: relative; min-height: min(650px, calc(100vh - 114px)); display: flex; align-items: flex-end; overflow: hidden; color: white; }
@@ -91,6 +95,7 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .comparison-divider span { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 3px solid white; border-radius: 50%; background: var(--green); color: white; font-size: 21px; font-weight: 800; transform: translate(-50%,-50%); box-shadow: 0 5px 18px rgba(0,0,0,.3); }
 .comparison-range { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
 .comparison:has(.comparison-range:focus-visible) .comparison-divider span { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.projects.content-section .comparison { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
 
 .method { background: #28443b; color: white; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.24); }
@@ -236,6 +241,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .service-grid, .steps { grid-template-columns: 1fr; }
   .service-card { min-height: 240px; padding: 26px; }
   .comparison { height: 112vw; min-height: 0; max-height: 570px; }
+  .projects.content-section .comparison { height: auto; aspect-ratio: 4 / 5; }
   .project-title { grid-template-columns: 40px 1fr; }
   .steps article, .steps article + article { min-height: 230px; padding: 25px 0; border-right: 0; }
   .steps h3 { margin-top: 55px; }
