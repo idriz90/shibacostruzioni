@@ -143,19 +143,10 @@ export default function Home() {
           </div>
 
           <article className="project-case">
-            <div className="project-title">
-              <span>01</span>
-              <div><h3>Ristrutturazione bagno</h3><p>Demolizione, nuovi impianti e finiture contemporanee.</p></div>
-            </div>
-            <BeforeAfterSlider before={url("/images/bagno-prima.jpeg")} after={url("/images/bagno-dopo.jpeg")} beforeAlt="Bagno prima della ristrutturazione" afterAlt="Bagno completato dopo la ristrutturazione" />
-          </article>
-
-          <article className="project-case">
-            <div className="project-title">
-              <span>02</span>
+            <div className="project-title project-title-no-number">
               <div><h3>Nuova zona giorno</h3><p>Spazi, impianti e superfici trasformati per una casa più luminosa.</p></div>
             </div>
-            <BeforeAfterSlider before={url("/images/soggiorno-prima.jpeg")} after={url("/images/soggiorno-dopo.jpeg")} beforeAlt="Zona giorno durante la ristrutturazione" afterAlt="Zona giorno rinnovata con nuova cucina" />
+            <BeforeAfterSlider before={url("/images/soggiorno-prima.jpeg")} after={url("/images/soggiorno-dopo.jpeg")} beforeAlt="Zona giorno durante la ristrutturazione" afterAlt="Zona giorno rinnovata con nuova cucina" initialPosition={30} />
           </article>
         </section>
 

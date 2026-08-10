@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
-import { BeforeAfterSlider } from "../components/BeforeAfterSlider";
-import { basePath } from "../basePath";
+import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { ProjectsContent } from "./ProjectsContent";
 export const metadata: Metadata = { title: "Progetti e lavori realizzati", description: "Guarda i lavori prima e dopo realizzati da Costruzioni Edili Shiba." };
-const projects = [
-  { title:"Ristrutturazione bagno", text:"Demolizione, rifacimento degli impianti, nuove superfici e doccia contemporanea.", before:`${basePath}/images/bagno-prima.jpeg`, after:`${basePath}/images/bagno-dopo.jpeg`, a:"Bagno prima della ristrutturazione", b:"Bagno completato dopo la ristrutturazione" },
-  { title:"Trasformazione zona giorno", text:"Nuova distribuzione, impianti, pavimenti e cucina per uno spazio più luminoso e funzionale.", before:`${basePath}/images/soggiorno-prima.jpeg`, after:`${basePath}/images/soggiorno-dopo.jpeg`, a:"Zona giorno durante i lavori", b:"Zona giorno rinnovata" },
-];
-export default function Progetti(){return <><SiteHeader/><main><PageHero eyebrow="Lavori realizzati" title="Prima e dopo. Risultati concreti." text="Cantieri reali, trasformazioni visibili e spazi pensati per essere vissuti ogni giorno."/><section className="projects content-section">{projects.map((p,i)=><article className="project-case" key={p.title}><div className="project-title"><span>{String(i+1).padStart(2,"0")}</span><div><h2>{p.title}</h2><p>{p.text}</p></div></div><BeforeAfterSlider before={p.before} after={p.after} beforeAlt={p.a} afterAlt={p.b}/></article>)}</section><section className="cta-band"><h2>Il prossimo progetto può essere il tuo.</h2><a className="button" href={siteUrl("/contatti/")}>Contattaci</a></section></main><SiteFooter/></>}
+export default function Progetti(){return <><SiteHeader/><ProjectsContent/><SiteFooter/></>}

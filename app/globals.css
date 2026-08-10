@@ -69,6 +69,7 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .split-heading > p { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
 .project-case { margin-top: 80px; padding-top: 26px; border-top: 1px solid #ccd0cc; }
 .project-title { display: grid; grid-template-columns: 60px 1fr; margin-bottom: 28px; }
+.project-title-no-number { grid-template-columns: 1fr; }
 .project-title > span { color: var(--green); font-weight: 800; }
 .project-title h3 { margin: 0 0 7px; font-size: 27px; }
 .project-title p { margin: 0; color: var(--muted); }
@@ -83,6 +84,9 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .comparison-divider span { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 3px solid white; border-radius: 50%; background: var(--green); color: white; font-size: 21px; font-weight: 800; transform: translate(-50%,-50%); box-shadow: 0 5px 18px rgba(0,0,0,.3); }
 .comparison-range { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
 .comparison:has(.comparison-range:focus-visible) .comparison-divider span { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.language-switcher { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 24px; }
+.language-switcher button { min-width: 105px; min-height: 42px; padding: 8px 14px; border: 1px solid rgba(29,48,42,.18); border-radius: 8px; background: white; color: var(--ink); font-weight: 750; cursor: pointer; }
+.language-switcher button[aria-pressed="true"] { border-color: var(--green); background: var(--green); color: white; }
 
 .method { background: #28443b; color: white; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.24); }
