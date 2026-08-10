@@ -168,10 +168,9 @@ export default function Home() {
       </main>
 
       <footer>
-        <a className="footer-logo" href={url("/")}><img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
         <div className="footer-company"><strong>COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
         <div className="footer-legal-data"><span>Partita IVA: 02226750509 - Codice Fiscale: 02226750509</span><span>Vat Europeo: IT02226750509</span><span>Rea: 190962</span><a href="mailto:ershiba@pec.it">PEC: ershiba@pec.it</a><span>Dipendenti: 12 (2026)</span></div>
-        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Costruzioni Edili Shiba</span></div>
+        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</span></div>
       </footer>
 
       <FloatingContacts />
