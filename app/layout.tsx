@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const publicBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://shibacostruzioni.it"),
   title: {
@@ -25,6 +27,11 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: `${publicBase}/images/logo-shiba-v2.png`,
+    shortcut: `${publicBase}/images/logo-shiba-v2.png`,
+    apple: `${publicBase}/images/logo-shiba-v2.png`,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

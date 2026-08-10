@@ -59,13 +59,13 @@ export default function Home() {
       />
 
       <div className="announcement">
-        <span>Ristrutturazioni e interventi edili in Toscana</span>
-        <a href="tel:+393420926964">+39 342 092 6964</a>
+        <span>La risposta professionale dell&apos;edilizia</span>
+        <div className="announcement-contacts"><a href="tel:+393420926964">+39 342 092 6964</a><a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a></div>
       </div>
 
       <header className="site-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
-          <img src={url("/images/logo-shiba.webp")} alt="Shiba Costruzioni" />
+          <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={url("/chi-siamo/")}>Chi siamo</a>
@@ -251,10 +251,10 @@ export default function Home() {
       </main>
 
       <footer>
-        <img src={url("/images/logo-shiba.webp")} alt="Shiba Costruzioni" />
-        <div><strong>Shiba Costruzioni</strong><span>P. IVA 02226750509</span></div>
-        <nav aria-label="Collegamenti legali"><a href="#">Privacy</a><a href="#">Cookie</a></nav>
-        <span>© {new Date().getFullYear()} Shiba Costruzioni</span>
+        <a className="footer-logo" href={url("/")}><img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
+        <div className="footer-company"><strong>Rag. Sociale: COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
+        <div className="footer-legal-data"><span>Partita IVA: 02226750509 - Codice Fiscale: 02226750509</span><span>Vat Europeo: IT02226750509</span><span>Rea: 190962</span><a href="mailto:ershiba@pec.it">PEC: ershiba@pec.it</a><span>Dipendenti: 12 (2026)</span></div>
+        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href="#">Privacy</a><a href="#">Cookie</a></nav><span>© 2016-2026 Shiba Costruzioni</span></div>
       </footer>
 
       <div className="mobile-actions" aria-label="Azioni rapide">
