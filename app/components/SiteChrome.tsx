@@ -8,7 +8,7 @@ export function SiteHeader() {
     <>
       <div className="announcement"><span>La risposta professionale dell&apos;edilizia</span><div className="announcement-contacts"><a href="tel:+393420926964">+39 342 092 6964</a><a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a></div></div>
       <header className="site-header">
-        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span>10 anni di esperienza<br/>sul territorio</span></a>
+        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span className="experience-badge"><strong>10+</strong><small>anni sul<br/>territorio</small></span></a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
           <a href={siteUrl("/come-lavoriamo/")}>Come lavoriamo</a><a href={siteUrl("/blog/")}>Blog</a>
@@ -42,9 +42,9 @@ export function SiteFooter() {
 
 export function FloatingContacts() {
   return <nav className="floating-contacts" aria-label="Contatti rapidi">
-    <a className="quick-call" href="tel:+393420926964" aria-label="Chiama Costruzioni Edili Shiba"><span aria-hidden="true">☎</span></a>
-    <a className="quick-email" href="mailto:info@shibacostruzioni.it" aria-label="Invia una email"><span aria-hidden="true">➤</span></a>
-    <a className="quick-whatsapp" href="https://wa.me/393420926964" target="_blank" rel="noreferrer" aria-label="Scrivi su WhatsApp"><span aria-hidden="true">☎</span></a>
+    <a className="quick-call" href="tel:+393420926964" aria-label="Chiama Costruzioni Edili Shiba"><span className="icon-mobile" aria-hidden="true" /></a>
+    <a className="quick-email" href="mailto:info@shibacostruzioni.it" aria-label="Invia una email"><span className="icon-email" aria-hidden="true" /></a>
+    <a className="quick-whatsapp" href="https://wa.me/393420926964" target="_blank" rel="noreferrer" aria-label="Scrivi su WhatsApp"><span className="icon-whatsapp" aria-hidden="true">☎</span></a>
   </nav>;
 }
 
