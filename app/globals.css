@@ -100,6 +100,7 @@ h2 { margin: 0; font-size: clamp(42px, 5.2vw, 78px); line-height: .98; letter-sp
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--green); }
 .consent { flex-direction: row !important; align-items: flex-start; text-transform: none !important; letter-spacing: 0 !important; line-height: 1.45; }
 .consent input { margin-top: 3px; accent-color: var(--green); }
+.consent a, .legal-page a, .cookie-notice a { color: #178665; text-decoration: underline; text-underline-offset: 3px; }
 .submit-button { width: 100%; }
 .submit-button:disabled { cursor: not-allowed; opacity: .55; transform: none; }
 .form-note { margin: -10px 0 0; color: var(--muted); font-size: 12px; text-align: center; }
@@ -110,9 +111,20 @@ footer { padding: 52px 5vw 88px; display: grid; grid-template-columns: 190px 1fr
 .footer-company strong { max-width: 470px; font-size: 15px; }
 footer a { color: inherit; }
 footer nav { display: flex; gap: 20px; }
+.footer-link-button { appearance: none; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .footer-bottom { grid-column: 2 / -1; padding-top: 24px; display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid rgba(255,255,255,.16); }
 .mobile-actions { display: none; }
+
+.legal-page { max-width: 1060px; margin: 0 auto; }
+.legal-page section { padding: 0 0 42px; margin-bottom: 42px; border-bottom: 1px solid #d8dcd8; }
+.legal-page h2 { margin-bottom: 20px; font-size: clamp(28px, 3vw, 44px); }
+.legal-page p { color: var(--muted); font-size: 17px; line-height: 1.75; }
+.legal-page code { padding: 2px 6px; border-radius: 4px; background: var(--cream); color: var(--ink); }
+.cookie-notice { position: fixed; z-index: 50; right: 24px; bottom: 24px; width: min(570px, calc(100vw - 48px)); padding: 24px; display: flex; align-items: center; gap: 24px; background: var(--white); color: var(--ink); border: 1px solid rgba(24,33,30,.14); border-radius: 18px; box-shadow: 0 22px 70px rgba(10,20,18,.22); }
+.cookie-notice strong { display: block; margin-bottom: 7px; }
+.cookie-notice p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.cookie-notice button { flex: 0 0 auto; min-height: 44px; padding: 0 19px; border: 0; border-radius: 8px; background: var(--yellow); color: var(--ink); font-weight: 850; cursor: pointer; }
 
 .page-hero { min-height: 560px; padding: 115px 7vw 85px; display: flex; flex-direction: column; justify-content: flex-end; background: var(--ink); color: white; }
 .page-hero h1 { max-width: 1050px; margin: 0; font-size: clamp(58px, 8vw, 120px); line-height: .88; letter-spacing: -.065em; }
@@ -197,6 +209,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .contact-form label, .contact-form label:nth-of-type(5), .consent, .submit-button, .form-note { grid-column: 1; }
   footer { grid-template-columns: 1fr; padding: 48px 22px 105px; gap: 30px; }
   .footer-bottom { grid-column: 1; align-items: flex-start; flex-direction: column; }
+  .cookie-notice { right: 14px; bottom: 80px; width: calc(100vw - 28px); padding: 20px; align-items: stretch; flex-direction: column; gap: 16px; }
   .mobile-actions { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; padding: 8px; background: white; box-shadow: 0 -7px 25px rgba(0,0,0,.12); }
   .mobile-actions a { min-height: 48px; display: flex; align-items: center; justify-content: center; font-weight: 850; }
   .mobile-actions a:last-child { background: var(--yellow); }

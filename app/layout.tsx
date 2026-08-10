@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieNotice } from "./components/CookieNotice";
 
 const publicBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -35,5 +36,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="it"><body>{children}</body></html>;
+  return <html lang="it"><body>{children}<CookieNotice /></body></html>;
 }

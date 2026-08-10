@@ -1,4 +1,5 @@
 import { basePath } from "./basePath";
+import { CookieSettingsButton } from "./components/CookieNotice";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -238,9 +239,9 @@ export default function Home() {
                 <option>Tetto o facciata</option><option>Impermeabilizzazione</option><option>Intervento strutturale</option>
               </select>
             </label>
-            <label>Raccontaci il progetto<textarea name="message" rows={4} required /></label>
-            <label className="consent"><input type="checkbox" name="privacy_consent" required />
-              <span>Ho letto l’informativa privacy e acconsento al trattamento dei dati per essere ricontattato.</span>
+            <label>Raccontaci il progetto<textarea name="message" rows={4} maxLength={2000} required /></label>
+            <label className="consent"><input type="checkbox" name="privacy_notice_read" required />
+              <span>Ho letto l’<a href={url("/privacy/")}>informativa privacy</a>. La casella registra la presa visione, non il consenso a finalità promozionali.</span>
             </label>
             <button className="button submit-button" type="submit" disabled={!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}>
               Invia la richiesta
@@ -254,7 +255,7 @@ export default function Home() {
         <a className="footer-logo" href={url("/")}><img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
         <div className="footer-company"><strong>Rag. Sociale: COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
         <div className="footer-legal-data"><span>Partita IVA: 02226750509 - Codice Fiscale: 02226750509</span><span>Vat Europeo: IT02226750509</span><span>Rea: 190962</span><a href="mailto:ershiba@pec.it">PEC: ershiba@pec.it</a><span>Dipendenti: 12 (2026)</span></div>
-        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href="#">Privacy</a><a href="#">Cookie</a></nav><span>© 2016-2026 Shiba Costruzioni</span></div>
+        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Shiba Costruzioni</span></div>
       </footer>
 
       <div className="mobile-actions" aria-label="Azioni rapide">
