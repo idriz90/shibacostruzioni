@@ -9,7 +9,7 @@ const projects = [
 
 export function ProjectsContent() {
   return <main>
-    <PageHero eyebrow="Lavori realizzati" title="Prima e dopo. Risultati concreti." text="Cantieri reali, trasformazioni visibili e spazi pensati per essere vissuti ogni giorno." />
+    <PageHero eyebrow="Lavori realizzati" title="Prima e dopo. Risultati concreti." text="Cantieri reali, trasformazioni visibili e spazi pensati per essere vissuti ogni giorno." compact />
     <section className="projects content-section">
       {projects.map(([title, description, before, after, beforeAlt, afterAlt], index) => <article className="project-case" key={before}>
         <div className="project-title"><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{title}</h2><p>{description}</p></div></div>
