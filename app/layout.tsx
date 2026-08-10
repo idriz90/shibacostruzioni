@@ -7,8 +7,8 @@ const publicBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   metadataBase: new URL("https://shibacostruzioni.it"),
   title: {
-    default: "Shiba Costruzioni | Ristrutturazioni ed edilizia a Pisa",
-    template: "%s | Shiba Costruzioni",
+    default: "Costruzioni Edili Shiba | Ristrutturazioni ed edilizia a Pisa",
+    template: "%s | Costruzioni Edili Shiba",
   },
   description: "Ristrutturazioni, impermeabilizzazioni e interventi strutturali a Pisa, Lucca e Livorno. Sopralluoghi e preventivi gratuiti.",
   keywords: ["ristrutturazioni Pisa", "impresa edile Pisa", "ristrutturazione bagno Pisa", "impermeabilizzazioni Toscana", "consolidamento strutturale"],
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "it_IT",
-    siteName: "Shiba Costruzioni",
-    title: "Shiba Costruzioni — La tua casa, fatta per durare",
+    siteName: "Costruzioni Edili Shiba",
+    title: "Costruzioni Edili Shiba — La tua casa, fatta per durare",
     description: "Ristrutturazioni e interventi edili a Pisa, Lucca e Livorno.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Shiba Costruzioni — La tua casa, fatta per durare" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Costruzioni Edili Shiba — La tua casa, fatta per durare" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shiba Costruzioni — La tua casa, fatta per durare",
+    title: "Costruzioni Edili Shiba — La tua casa, fatta per durare",
     description: "Ristrutturazioni e interventi edili a Pisa, Lucca e Livorno.",
     images: ["/og.png"],
   },

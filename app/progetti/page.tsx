@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { basePath } from "../basePath";
-export const metadata: Metadata = { title: "Progetti e lavori realizzati", description: "Guarda i lavori prima e dopo realizzati da Shiba Costruzioni." };
+export const metadata: Metadata = { title: "Progetti e lavori realizzati", description: "Guarda i lavori prima e dopo realizzati da Costruzioni Edili Shiba." };
 const projects = [
   { title:"Ristrutturazione bagno", text:"Demolizione, rifacimento degli impianti, nuove superfici e doccia contemporanea.", before:`${basePath}/images/bagno-prima.jpeg`, after:`${basePath}/images/bagno-dopo.jpeg`, a:"Bagno prima della ristrutturazione", b:"Bagno completato dopo la ristrutturazione" },
   { title:"Trasformazione zona giorno", text:"Nuova distribuzione, impianti, pavimenti e cucina per uno spazio più luminoso e funzionale.", before:`${basePath}/images/soggiorno-prima.jpeg`, after:`${basePath}/images/soggiorno-dopo.jpeg`, a:"Zona giorno durante i lavori", b:"Zona giorno rinnovata" },

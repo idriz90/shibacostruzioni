@@ -10,7 +10,7 @@ export function SiteHeader() {
       <header className="site-header">
         <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
-          <a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
+          <a href={siteUrl("/")}>Home</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
           <a href={siteUrl("/come-lavoriamo/")}>Come lavoriamo</a><a href={siteUrl("/blog/")}>Blog</a>
         </nav>
         <a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a>
@@ -28,12 +28,12 @@ export function SiteFooter() {
     <>
       <footer>
         <a className="footer-logo" href={siteUrl("/")}><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
-        <div className="footer-company"><strong>Rag. Sociale: COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
+        <div className="footer-company"><strong>COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
         <div className="footer-legal-data">
           <span>Partita IVA: 02226750509 - Codice Fiscale: 02226750509</span><span>Vat Europeo: IT02226750509</span>
           <span>Rea: 190962</span><a href="mailto:ershiba@pec.it">PEC: ershiba@pec.it</a><span>Dipendenti: 12 (2026)</span>
         </div>
-        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={siteUrl("/privacy/")}>Privacy</a><a href={siteUrl("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Shiba Costruzioni</span></div>
+        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={siteUrl("/privacy/")}>Privacy</a><a href={siteUrl("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Costruzioni Edili Shiba</span></div>
       </footer>
       <div className="mobile-actions" aria-label="Azioni rapide"><a href="tel:+393420926964">Chiama</a><a href={siteUrl("/contatti/")}>Preventivo</a></div>
     </>

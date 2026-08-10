@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: "Chi siamo", description: "Conosci Shiba Costruzioni, impresa familiare attiva a Pisa, Lucca e Livorno." };
+export const metadata: Metadata = { title: "Chi siamo", description: "Conosci Costruzioni Edili Shiba, impresa familiare attiva a Pisa, Lucca e Livorno." };
 
 export default function ChiSiamo() {
   return <><SiteHeader /><main><PageHero eyebrow="Chi siamo" title="Esperienza artigiana. Presenza diretta." text="Un’impresa familiare, una rete di professionisti fidati e un unico obiettivo: realizzare lavori solidi, trasparenti e capaci di durare." />

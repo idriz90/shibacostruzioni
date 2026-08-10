@@ -36,7 +36,7 @@ const steps = [
 const schema = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
-  name: "Shiba Costruzioni",
+  name: "Costruzioni Edili Shiba",
   url: "https://shibacostruzioni.it",
   telephone: "+393420926964",
   email: "info@shibacostruzioni.it",
@@ -69,6 +69,7 @@ export default function Home() {
           <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
+          <a href={url("/")}>Home</a>
           <a href={url("/chi-siamo/")}>Chi siamo</a>
           <a href={url("/servizi/")}>Servizi</a>
           <a href={url("/progetti/")}>Progetti</a>
@@ -91,7 +92,7 @@ export default function Home() {
 
       <main id="inizio">
         <section className="hero">
-          <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Shiba Costruzioni" />
+          <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Costruzioni Edili Shiba" />
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow light">Costruiamo valore, proteggiamo ciò che conta</p>
@@ -118,7 +119,7 @@ export default function Home() {
           </div>
           <div className="intro-copy">
             <p>
-              Shiba Costruzioni unisce esperienza artigiana, tecnici fidati e una conoscenza
+              Costruzioni Edili Shiba unisce esperienza artigiana, tecnici fidati e una conoscenza
               profonda degli edifici toscani. Dal primo sopralluogo alla consegna sarete seguiti
               direttamente dal titolare, con comunicazione trasparente e soluzioni su misura.
             </p>
@@ -228,7 +229,7 @@ export default function Home() {
           </div>
           <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""} />
-            <input type="hidden" name="subject" value="Nuova richiesta dal sito Shiba Costruzioni" />
+            <input type="hidden" name="subject" value="Nuova richiesta dal sito Costruzioni Edili Shiba" />
             <label>Nome e cognome<input name="name" type="text" autoComplete="name" required /></label>
             <label>Email<input name="email" type="email" autoComplete="email" required /></label>
             <label>Telefono<input name="phone" type="tel" autoComplete="tel" /></label>
@@ -253,9 +254,9 @@ export default function Home() {
 
       <footer>
         <a className="footer-logo" href={url("/")}><img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
-        <div className="footer-company"><strong>Rag. Sociale: COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
+        <div className="footer-company"><strong>COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong><span>Indirizzo: VIA GIACOMO BRODOLINI 14 - 56017 - SAN GIULIANO TERME (PI)</span></div>
         <div className="footer-legal-data"><span>Partita IVA: 02226750509 - Codice Fiscale: 02226750509</span><span>Vat Europeo: IT02226750509</span><span>Rea: 190962</span><a href="mailto:ershiba@pec.it">PEC: ershiba@pec.it</a><span>Dipendenti: 12 (2026)</span></div>
-        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Shiba Costruzioni</span></div>
+        <div className="footer-bottom"><nav aria-label="Collegamenti legali"><a href={url("/privacy/")}>Privacy</a><a href={url("/cookie-policy/")}>Cookie</a><CookieSettingsButton /></nav><span>© 2016-2026 Costruzioni Edili Shiba</span></div>
       </footer>
 
       <div className="mobile-actions" aria-label="Azioni rapide">
