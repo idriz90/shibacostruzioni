@@ -45,6 +45,7 @@ export function FloatingContacts() {
   </nav>;
 }
 
-export function PageHero({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
-  return <section className="page-hero"><p className="eyebrow light">{eyebrow}</p><h1>{title}</h1><p>{text}</p></section>;
+export function PageHero({ eyebrow, title, text, backgroundImage }: { eyebrow: string; title: string; text: string; backgroundImage?: string }) {
+  const style = backgroundImage ? { backgroundImage: `linear-gradient(90deg, rgba(20,36,31,.88), rgba(20,36,31,.42)), url("${backgroundImage}")` } : undefined;
+  return <section className="page-hero" style={style}><p className="eyebrow light">{eyebrow}</p><h1>{title}</h1><p>{text}</p></section>;
 }

@@ -60,6 +60,10 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .service-card h3 { margin: 48px 0 14px; font-size: clamp(24px, 2.2vw, 32px); line-height: 1.1; letter-spacing: -.025em; }
 .service-card p { max-width: 470px; min-height: 0; margin: 0; color: var(--muted); line-height: 1.6; }
 .service-card:hover { transform: translateY(-3px); border-color: rgba(44,173,130,.4); box-shadow: 0 16px 38px rgba(29,48,42,.08); }
+.service-page-grid { grid-template-columns: repeat(3, 1fr); }
+.service-page-grid .service-card { min-height: 330px; }
+.service-page-grid .service-card .service-kicker { margin: 38px 0 8px; color: var(--green); font-size: 11px; font-weight: 800; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; }
+.service-page-grid .service-card h2 { margin: 0 0 16px; font-size: clamp(25px, 2.4vw, 35px); line-height: 1.08; letter-spacing: -.025em; }
 
 .split-heading { display: grid; grid-template-columns: 1fr 390px; gap: 50px; align-items: end; }
 .split-heading > p { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
@@ -147,7 +151,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .cookie-notice p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .cookie-notice button { flex: 0 0 auto; min-height: 44px; padding: 0 19px; border: 0; border-radius: 8px; background: var(--yellow); color: var(--ink); font-weight: 850; cursor: pointer; }
 
-.page-hero { min-height: 460px; padding: 90px max(5vw, calc((100vw - 1180px)/2)) 72px; display: flex; flex-direction: column; justify-content: flex-end; background: #28443b; color: white; }
+.page-hero { min-height: 460px; padding: 90px max(5vw, calc((100vw - 1180px)/2)) 72px; display: flex; flex-direction: column; justify-content: flex-end; background: #28443b center 52% / cover no-repeat; color: white; }
 .page-hero h1 { max-width: 980px; margin: 0; font-size: clamp(50px, 6vw, 86px); line-height: .96; letter-spacing: -.045em; font-weight: 650; }
 .page-hero > p:last-child { max-width: 720px; margin: 34px 0 0; color: rgba(255,255,255,.68); font-size: 20px; line-height: 1.65; }
 .content-section { padding: clamp(72px, 7vw, 108px) max(5vw, calc((100vw - 1180px)/2)); }
