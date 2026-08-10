@@ -6,7 +6,7 @@
     "node": ">=22.13.0"
   },
   "pnpm": {
-    "ignoredBuiltDependencies": [
+    "onlyBuiltDependencies": [
       "esbuild",
       "sharp",
       "unrs-resolver",
