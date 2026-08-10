@@ -236,7 +236,7 @@ export default function Home() {
               <select name="service" defaultValue="">
                 <option value="" disabled>Seleziona un servizio</option>
                 <option>Ristrutturazione completa</option><option>Bagno e interni</option>
-                <option>Tetto o facciata</option><option>Impermeabilizzazione</option><option>Intervento strutturale</option>
+                <option>Tetto o facciata</option><option>Impermeabilizzazione</option><option>Intervento strutturale</option><option>Altro</option>
               </select>
             </label>
             <label>Raccontaci il progetto<textarea name="message" rows={4} maxLength={2000} required /></label>
