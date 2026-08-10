@@ -8,7 +8,7 @@ export function SiteHeader() {
     <>
       <div className="announcement"><span>La risposta professionale dell&apos;edilizia</span><div className="announcement-contacts"><a href="tel:+393420926964">+39 342 092 6964</a><a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a></div></div>
       <header className="site-header">
-        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /></a>
+        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span>10 anni di esperienza<br/>sul territorio</span></a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
           <a href={siteUrl("/come-lavoriamo/")}>Come lavoriamo</a><a href={siteUrl("/blog/")}>Blog</a>

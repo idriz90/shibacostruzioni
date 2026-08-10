@@ -26,13 +26,6 @@ const services = [
   },
 ];
 
-const steps = [
-  ["01", "Sopralluogo", "Ascoltiamo le esigenze e valutiamo l’immobile direttamente sul posto."],
-  ["02", "Proposta chiara", "Definiamo lavorazioni, materiali, tempi e costi senza sorprese."],
-  ["03", "Cantiere seguito", "Coordiniamo artigiani e tecnici con un referente sempre presente."],
-  ["04", "Consegna", "Verifichiamo ogni dettaglio e lasciamo spazi pronti da vivere."],
-];
-
 const schema = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
@@ -67,6 +60,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
           <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
+          <span>10 anni di esperienza<br />sul territorio</span>
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={url("/")}>Home</a>
@@ -102,7 +96,7 @@ export default function Home() {
               Lucca e Livorno. Un referente diretto, un lavoro fatto a regola d’arte.
             </p>
             <div className="hero-actions">
-              <a className="button" href="#contatti">Richiedi un preventivo</a>
+              <a className="button" href={url("/contatti/")}>Richiedi un preventivo</a>
               <a className="text-link light-link" href={url("/progetti/")}>Guarda i lavori <span>↘</span></a>
             </div>
           </div>
@@ -172,80 +166,6 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="method section" id="metodo">
-          <div className="section-heading">
-            <p className="eyebrow light">Come lavoriamo</p>
-            <h2>Un percorso chiaro,<br />dall’idea alla consegna.</h2>
-          </div>
-          <div className="steps">
-            {steps.map(([number, title, text]) => (
-              <article key={number}>
-                <span>{number}</span><h3>{title}</h3><p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="local-seo section">
-          <div>
-            <p className="eyebrow">Radicati nel territorio</p>
-            <h2>Conosciamo le case della Toscana.</h2>
-          </div>
-          <div>
-            <p>
-              Umidità, caratteristiche del terreno e vincoli architettonici richiedono esperienza
-              locale. Operiamo principalmente nelle province di Pisa, Lucca e Livorno, con interventi
-              a San Giuliano Terme, Cascina, Calci, Vecchiano, Pontedera e nei comuni vicini.
-            </p>
-            <div className="place-list" aria-label="Principali zone servite">
-              <span>Pisa</span><span>Lucca</span><span>Livorno</span><span>San Giuliano Terme</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="blog section" id="blog">
-          <div className="blog-card">
-            <p className="eyebrow light">Dal cantiere — Il blog</p>
-            <h2>Consigli utili per ristrutturare con più consapevolezza.</h2>
-            <p>Guide pratiche su umidità, crepe, materiali, manutenzione e ristrutturazioni. La pubblicazione Substack è in preparazione.</p>
-            <span className="coming-soon">Substack · prossimamente</span>
-          </div>
-        </section>
-
-        <section className="contact section" id="contatti">
-          <div className="contact-copy">
-            <p className="eyebrow">Parliamo del tuo progetto</p>
-            <h2>Da dove vuoi<br />cominciare?</h2>
-            <p>Raccontaci cosa serve alla tua casa. Ti ricontatteremo per organizzare un primo confronto.</p>
-            <div className="contact-details">
-              <a href="tel:+393420926964">+39 342 092 6964</a>
-              <a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a>
-              <span>Via Giacomo Brodolini 14<br />San Giuliano Terme, Pisa</span>
-            </div>
-          </div>
-          <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""} />
-            <input type="hidden" name="subject" value="Nuova richiesta dal sito Costruzioni Edili Shiba" />
-            <label>Nome e cognome<input name="name" type="text" autoComplete="name" required /></label>
-            <label>Email<input name="email" type="email" autoComplete="email" required /></label>
-            <label>Telefono<input name="phone" type="tel" autoComplete="tel" /></label>
-            <label>Di cosa hai bisogno?
-              <select name="service" defaultValue="">
-                <option value="" disabled>Seleziona un servizio</option>
-                <option>Ristrutturazione completa</option><option>Bagno e interni</option>
-                <option>Tetto o facciata</option><option>Impermeabilizzazione</option><option>Intervento strutturale</option><option>Altro</option>
-              </select>
-            </label>
-            <label>Raccontaci il progetto<textarea name="message" rows={4} maxLength={2000} required /></label>
-            <label className="consent"><input type="checkbox" name="privacy_notice_read" required />
-              <span>Ho letto l’<a href={url("/privacy/")}>informativa privacy</a>. La casella registra la presa visione, non il consenso a finalità promozionali.</span>
-            </label>
-            <button className="button submit-button" type="submit" disabled={!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}>
-              Invia la richiesta
-            </button>
-            {!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY && <p className="form-note">Modulo in anteprima: attivazione Web3Forms in attesa della chiave.</p>}
-          </form>
-        </section>
       </main>
 
       <footer>
