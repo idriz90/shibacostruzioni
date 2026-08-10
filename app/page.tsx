@@ -106,10 +106,6 @@ export default function Home() {
               <a className="text-link light-link" href={url("/progetti/")}>Guarda i lavori <span>↘</span></a>
             </div>
           </div>
-          <div className="hero-proof">
-            <strong>10+</strong>
-            <span>anni di esperienza<br />sul territorio</span>
-          </div>
         </section>
 
         <section className="intro section" id="chi-siamo">
