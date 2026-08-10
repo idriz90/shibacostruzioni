@@ -115,14 +115,15 @@ footer nav { display: flex; gap: 20px; }
 .footer-link-button { appearance: none; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .footer-bottom { grid-column: 2 / -1; padding-top: 24px; display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid rgba(255,255,255,.16); }
-.floating-contacts { position: fixed; z-index: 35; right: 0; top: 52%; display: flex; align-items: flex-end; flex-direction: column; gap: 8px; transform: translateY(-50%); }
-.floating-contacts a { min-width: 54px; min-height: 52px; padding: 0 13px; display: flex; align-items: center; justify-content: flex-start; gap: 10px; color: white; border-radius: 12px 0 0 12px; box-shadow: 0 8px 24px rgba(20,39,33,.18); transition: min-width .2s ease, transform .2s ease; }
-.floating-contacts a:hover { min-width: 132px; transform: translateX(0); }
-.floating-contacts span { width: 28px; flex: 0 0 28px; text-align: center; font-size: 16px; font-weight: 850; }
-.floating-contacts b { font-size: 12px; font-weight: 750; white-space: nowrap; }
-.quick-call { background: #246b91; }
-.quick-whatsapp { background: #25a866; }
-.quick-email { background: #ad8242; }
+.floating-contacts { position: fixed; z-index: 35; right: 24px; top: 52%; display: flex; align-items: center; flex-direction: column; gap: 10px; transform: translateY(-50%); }
+.floating-contacts a { width: 66px; height: 66px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 50%; box-shadow: 0 10px 28px rgba(20,39,33,.2); transition: transform .2s ease, box-shadow .2s ease; }
+.floating-contacts a:hover { transform: scale(1.08); box-shadow: 0 13px 32px rgba(20,39,33,.26); }
+.floating-contacts span { display: flex; align-items: center; justify-content: center; color: white; font-family: Arial, sans-serif; font-size: 29px; font-weight: 500; line-height: 1; }
+.quick-call { background: #1784c2; }
+.quick-email { background: #fabe28; }
+.quick-email span { transform: rotate(-38deg); font-size: 31px; }
+.quick-whatsapp { background: #19bd68; }
+.quick-whatsapp span { width: 34px; height: 34px; border: 2px solid white; border-radius: 50%; font-size: 21px; transform: rotate(-8deg); }
 
 .legal-page { max-width: 1060px; margin: 0 auto; }
 .legal-page section { padding: 0 0 42px; margin-bottom: 42px; border-bottom: 1px solid #d8dcd8; }
@@ -219,11 +220,11 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   footer { grid-template-columns: 1fr; padding: 48px 22px 105px; gap: 30px; }
   .footer-bottom { grid-column: 1; align-items: flex-start; flex-direction: column; }
   .cookie-notice { right: 14px; bottom: 80px; width: calc(100vw - 28px); padding: 20px; align-items: stretch; flex-direction: column; gap: 16px; }
-  .floating-contacts { top: auto; right: 8px; bottom: 88px; gap: 7px; transform: none; }
-  .floating-contacts a { min-width: 48px; width: 48px; min-height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
-  .floating-contacts a:hover { min-width: 48px; }
-  .floating-contacts span { width: auto; flex-basis: auto; }
-  .floating-contacts b { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .floating-contacts { top: auto; right: 12px; bottom: 28px; gap: 9px; transform: none; }
+  .floating-contacts a { width: 58px; height: 58px; }
+  .floating-contacts span { font-size: 26px; }
+  .quick-email span { font-size: 28px; }
+  .quick-whatsapp span { width: 31px; height: 31px; font-size: 19px; }
   .page-hero { min-height: 420px; padding: 82px 22px 58px; }
   .page-hero h1 { font-size: clamp(44px,14vw,66px); }
   .page-hero > p:last-child { font-size: 17px; }
