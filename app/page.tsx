@@ -55,7 +55,6 @@ export default function Home() {
 
       <div className="announcement">
         <span>La risposta professionale dell&apos;edilizia</span>
-        <div className="announcement-contacts"><a href="tel:+393420926964">+39 342 092 6964</a><a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a></div>
       </div>
 
       <header className="site-header">

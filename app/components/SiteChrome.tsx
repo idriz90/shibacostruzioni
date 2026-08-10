@@ -6,7 +6,7 @@ export const siteUrl = (path: string) => `${basePath}${path}`;
 export function SiteHeader() {
   return (
     <>
-      <div className="announcement"><span>La risposta professionale dell&apos;edilizia</span><div className="announcement-contacts"><a href="tel:+393420926964">+39 342 092 6964</a><a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a></div></div>
+      <div className="announcement"><span>La risposta professionale dell&apos;edilizia</span></div>
       <header className="site-header">
         <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span className="experience-badge"><strong>10+</strong><small>anni sul<br/>territorio</small></span></a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
