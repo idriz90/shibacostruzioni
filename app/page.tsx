@@ -75,7 +75,7 @@ export default function Home() {
           <a href={url("/come-lavoriamo/")}>Come lavoriamo</a>
           <a href={url("/blog/")}>Blog</a>
         </nav>
-        <a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo</a>
+        <a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a>
         <details className="mobile-menu">
           <summary aria-label="Apri il menu">Menu</summary>
           <nav aria-label="Navigazione mobile">

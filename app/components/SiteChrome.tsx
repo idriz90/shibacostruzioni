@@ -13,7 +13,7 @@ export function SiteHeader() {
           <a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
           <a href={siteUrl("/come-lavoriamo/")}>Come lavoriamo</a><a href={siteUrl("/blog/")}>Blog</a>
         </nav>
-        <a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo</a>
+        <a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a>
         <details className="mobile-menu"><summary aria-label="Apri il menu">Menu</summary><nav aria-label="Navigazione mobile">
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a>
           <a href={siteUrl("/come-lavoriamo/")}>Come lavoriamo</a><a href={siteUrl("/blog/")}>Blog</a><a href={siteUrl("/contatti/")}>Contatti</a>
