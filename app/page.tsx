@@ -64,22 +64,22 @@ export default function Home() {
           <img src="/images/logo-shiba.webp" alt="Shiba Costruzioni" />
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
-          <a href="#chi-siamo">Chi siamo</a>
-          <a href="#servizi">Servizi</a>
-          <a href="#progetti">Progetti</a>
-          <a href="#metodo">Come lavoriamo</a>
-          <a href="#blog">Blog</a>
+          <a href="/chi-siamo">Chi siamo</a>
+          <a href="/servizi">Servizi</a>
+          <a href="/progetti">Progetti</a>
+          <a href="/come-lavoriamo">Come lavoriamo</a>
+          <a href="/blog">Blog</a>
         </nav>
         <a className="button button-small" href="#contatti">Richiedi un sopralluogo</a>
         <details className="mobile-menu">
           <summary aria-label="Apri il menu">Menu</summary>
           <nav aria-label="Navigazione mobile">
-            <a href="#chi-siamo">Chi siamo</a>
-            <a href="#servizi">Servizi</a>
-            <a href="#progetti">Progetti</a>
-            <a href="#metodo">Come lavoriamo</a>
-            <a href="#blog">Blog</a>
-            <a href="#contatti">Contatti</a>
+            <a href="/chi-siamo">Chi siamo</a>
+            <a href="/servizi">Servizi</a>
+            <a href="/progetti">Progetti</a>
+            <a href="/come-lavoriamo">Come lavoriamo</a>
+            <a href="/blog">Blog</a>
+            <a href="/contatti">Contatti</a>
           </nav>
         </details>
       </header>
@@ -97,7 +97,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button" href="#contatti">Richiedi un preventivo</a>
-              <a className="text-link light-link" href="#progetti">Guarda i lavori <span>↘</span></a>
+              <a className="text-link light-link" href="/progetti">Guarda i lavori <span>↘</span></a>
             </div>
           </div>
           <div className="hero-proof">
@@ -117,7 +117,7 @@ export default function Home() {
               profonda degli edifici toscani. Dal primo sopralluogo alla consegna sarete seguiti
               direttamente dal titolare, con comunicazione trasparente e soluzioni su misura.
             </p>
-            <a className="text-link" href="#metodo">Scopri il nostro metodo <span>→</span></a>
+            <a className="text-link" href="/come-lavoriamo">Scopri il nostro metodo <span>→</span></a>
           </div>
         </section>
 
@@ -132,7 +132,7 @@ export default function Home() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <a href="#contatti" aria-label={`Richiedi informazioni su ${service.title}`}>Parliamone →</a>
+                <a href="/contatti" aria-label={`Richiedi informazioni su ${service.title}`}>Parliamone →</a>
               </article>
             ))}
           </div>

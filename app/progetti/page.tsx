@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import { PageHero, SiteFooter, SiteHeader } from "../components/SiteChrome";
+export const metadata: Metadata = { title: "Progetti e lavori realizzati", description: "Guarda i lavori prima e dopo realizzati da Shiba Costruzioni." };
+const projects = [
+  { title:"Ristrutturazione bagno", text:"Demolizione, rifacimento degli impianti, nuove superfici e doccia contemporanea.", before:"/images/bagno-prima.jpeg", after:"/images/bagno-dopo.jpeg", a:"Bagno prima della ristrutturazione", b:"Bagno completato dopo la ristrutturazione" },
+  { title:"Trasformazione zona giorno", text:"Nuova distribuzione, impianti, pavimenti e cucina per uno spazio più luminoso e funzionale.", before:"/images/soggiorno-prima.jpeg", after:"/images/soggiorno-dopo.jpeg", a:"Zona giorno durante i lavori", b:"Zona giorno rinnovata" },
+];
+export default function Progetti(){return <><SiteHeader/><main><PageHero eyebrow="Lavori realizzati" title="Prima e dopo. Risultati concreti." text="Cantieri reali, trasformazioni visibili e spazi pensati per essere vissuti ogni giorno."/><section className="projects content-section">{projects.map((p,i)=><article className="project-case" key={p.title}><div className="project-title"><span>{String(i+1).padStart(2,"0")}</span><div><h2>{p.title}</h2><p>{p.text}</p></div></div><div className="before-after"><figure><img src={p.before} alt={p.a}/><figcaption>Prima</figcaption></figure><figure><img src={p.after} alt={p.b}/><figcaption>Dopo</figcaption></figure></div></article>)}</section><section className="cta-band"><h2>Il prossimo progetto può essere il tuo.</h2><a className="button" href="/contatti">Contattaci</a></section></main><SiteFooter/></>}
