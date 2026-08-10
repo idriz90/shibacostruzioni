@@ -68,10 +68,17 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .project-title > span { color: var(--green); font-weight: 800; }
 .project-title h3 { margin: 0 0 7px; font-size: 27px; }
 .project-title p { margin: 0; color: var(--muted); }
-.before-after { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; height: min(55vw, 680px); }
-.before-after figure { position: relative; margin: 0; overflow: hidden; background: #ddd; }
-.before-after img { width: 100%; height: 100%; object-fit: cover; }
-.before-after figcaption { position: absolute; left: 16px; bottom: 16px; padding: 9px 14px; background: var(--ink); color: white; font-size: 12px; font-weight: 850; text-transform: uppercase; letter-spacing: .12em; }
+.comparison { --position: 50%; position: relative; width: 100%; height: min(55vw, 680px); min-height: 430px; overflow: hidden; background: #ddd; border-radius: 10px; user-select: none; touch-action: pan-y; }
+.comparison-image { width: 100%; height: 100%; object-fit: cover; }
+.comparison-before { position: absolute; inset: 0; }
+.comparison-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--position)); }
+.comparison-label { position: absolute; top: 18px; z-index: 2; padding: 8px 12px; border-radius: 5px; background: rgba(24,33,30,.82); color: white; font-size: 11px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; pointer-events: none; }
+.comparison-label-before { left: 18px; }
+.comparison-label-after { right: 18px; }
+.comparison-divider { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--position); width: 3px; background: white; box-shadow: 0 0 12px rgba(0,0,0,.35); transform: translateX(-50%); pointer-events: none; }
+.comparison-divider span { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 3px solid white; border-radius: 50%; background: var(--green); color: white; font-size: 21px; font-weight: 800; transform: translate(-50%,-50%); box-shadow: 0 5px 18px rgba(0,0,0,.3); }
+.comparison-range { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.comparison:has(.comparison-range:focus-visible) .comparison-divider span { outline: 3px solid var(--yellow); outline-offset: 3px; }
 
 .method { background: #28443b; color: white; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.24); }
@@ -215,9 +222,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   h2 { font-size: clamp(36px, 11vw, 52px); }
   .service-grid, .steps { grid-template-columns: 1fr; }
   .service-card { min-height: 240px; padding: 26px; }
-  .before-after { grid-template-columns: 1fr; height: auto; }
-  .before-after figure { height: 112vw; max-height: 570px; }
-  .before-after figure:nth-child(2) { height: 75vw; }
+  .comparison { height: 112vw; min-height: 0; max-height: 570px; }
   .project-title { grid-template-columns: 40px 1fr; }
   .steps article, .steps article + article { min-height: 230px; padding: 25px 0; border-right: 0; }
   .steps h3 { margin-top: 55px; }
@@ -242,7 +247,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .cta-band { align-items: flex-start; flex-direction: column; padding: 58px 22px; }
   .service-list article, .process-list article { grid-template-columns: 40px 1fr; gap: 20px; }
   .service-list article > p, .service-list article > a, .process-list article > p { grid-column: 2; }
-  .before-after { height: auto; }
+  .comparison-divider span { width: 42px; height: 42px; }
   .substack-box { margin: 0 22px 80px; }
 }
 

@@ -1,6 +1,7 @@
 import { basePath } from "./basePath";
 import { CookieSettingsButton } from "./components/CookieNotice";
 import { FloatingContacts } from "./components/SiteChrome";
+import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -146,10 +147,7 @@ export default function Home() {
               <span>01</span>
               <div><h3>Ristrutturazione bagno</h3><p>Demolizione, nuovi impianti e finiture contemporanee.</p></div>
             </div>
-            <div className="before-after">
-              <figure><img src={url("/images/bagno-prima.jpeg")} alt="Bagno prima della ristrutturazione" /><figcaption>Prima</figcaption></figure>
-              <figure><img src={url("/images/bagno-dopo.jpeg")} alt="Bagno completato dopo la ristrutturazione" /><figcaption>Dopo</figcaption></figure>
-            </div>
+            <BeforeAfterSlider before={url("/images/bagno-prima.jpeg")} after={url("/images/bagno-dopo.jpeg")} beforeAlt="Bagno prima della ristrutturazione" afterAlt="Bagno completato dopo la ristrutturazione" />
           </article>
 
           <article className="project-case">
@@ -157,10 +155,7 @@ export default function Home() {
               <span>02</span>
               <div><h3>Nuova zona giorno</h3><p>Spazi, impianti e superfici trasformati per una casa più luminosa.</p></div>
             </div>
-            <div className="before-after">
-              <figure><img src={url("/images/soggiorno-prima.jpeg")} alt="Zona giorno durante la ristrutturazione" /><figcaption>Prima</figcaption></figure>
-              <figure><img src={url("/images/soggiorno-dopo.jpeg")} alt="Zona giorno rinnovata con nuova cucina" /><figcaption>Dopo</figcaption></figure>
-            </div>
+            <BeforeAfterSlider before={url("/images/soggiorno-prima.jpeg")} after={url("/images/soggiorno-dopo.jpeg")} beforeAlt="Zona giorno durante la ristrutturazione" afterAlt="Zona giorno rinnovata con nuova cucina" />
           </article>
         </section>
 
