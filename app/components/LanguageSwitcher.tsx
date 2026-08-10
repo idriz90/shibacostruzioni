@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const translations: Record<string, string> = {
   "La risposta professionale nell'edilizia": "The professional answer in construction",
@@ -96,7 +96,6 @@ function translatePage(language: "it" | "en") {
 
 export function LanguageSwitcher() {
   const [language, setLanguage] = useState<"it" | "en">("it");
-  const detailsRef = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem("shiba-language") === "en" ? "en" : "it";
@@ -111,14 +110,10 @@ export function LanguageSwitcher() {
     localStorage.setItem("shiba-language", next);
     setLanguage(next);
     translatePage(next);
-    if (detailsRef.current) detailsRef.current.open = false;
   };
 
-  return <details className="language-menu" ref={detailsRef} data-no-translate>
-    <summary aria-label="Seleziona lingua"><span className={`flag-icon flag-${language}`} aria-hidden="true" /></summary>
-    <div>
-      <button type="button" aria-pressed={language === "it"} onClick={() => choose("it")}><span className="flag-icon flag-it" aria-hidden="true" /> Italiano</button>
-      <button type="button" aria-pressed={language === "en"} onClick={() => choose("en")}><span className="flag-icon flag-en" aria-hidden="true" /> English</button>
-    </div>
-  </details>;
+  const nextLanguage = language === "it" ? "en" : "it";
+  return <button className="language-toggle" type="button" onClick={() => choose(nextLanguage)} aria-label={nextLanguage === "en" ? "Translate website into English" : "Traduci il sito in italiano"} data-no-translate>
+    <span className={`flag-icon flag-${nextLanguage}`} aria-hidden="true" />
+  </button>;
 }
