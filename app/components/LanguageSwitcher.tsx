@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { basePath } from "../basePath";
 
 const translations: Record<string, string> = {
   "La risposta professionale nell'edilizia": "The professional answer in construction",
@@ -114,6 +115,6 @@ export function LanguageSwitcher() {
 
   const nextLanguage = language === "it" ? "en" : "it";
   return <button className="language-toggle" type="button" onClick={() => choose(nextLanguage)} aria-label={nextLanguage === "en" ? "Translate website into English" : "Traduci il sito in italiano"} data-no-translate>
-    <span className={`flag-icon flag-${nextLanguage}`} aria-hidden="true" />
+    {nextLanguage === "en" ? <img className="flag-icon" src={`${basePath}/images/uk-flag.jpg`} alt="" aria-hidden="true" /> : <span className="flag-icon flag-it" aria-hidden="true" />}
   </button>;
 }

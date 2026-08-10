@@ -32,10 +32,9 @@ button, input, textarea, select { font: inherit; }
 .header-actions > .button-small { white-space: nowrap; }
 .language-toggle { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; padding: 0; border: 1px solid rgba(29,48,42,.16); border-radius: 8px; background: white; cursor: pointer; }
 .language-toggle:hover { background: var(--cream); }
-.flag-icon { width: 26px; height: 18px; display: inline-block; flex: 0 0 auto; margin-right: 7px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.16); vertical-align: middle; }
+.flag-icon { width: 26px; height: 18px; display: inline-block; flex: 0 0 auto; margin-right: 7px; border-radius: 2px; object-fit: cover; box-shadow: 0 0 0 1px rgba(0,0,0,.16); vertical-align: middle; }
 .language-toggle .flag-icon { margin-right: 0; }
 .flag-it { background: linear-gradient(90deg, #009246 0 33.333%, #fff 33.333% 66.666%, #ce2b37 66.666%); }
-.flag-en { background-color: #012169; background-image: linear-gradient(33deg, transparent 43%, #fff 43% 57%, transparent 57%), linear-gradient(-33deg, transparent 43%, #fff 43% 57%, transparent 57%), linear-gradient(33deg, transparent 48%, #c8102e 48% 52%, transparent 52%), linear-gradient(-33deg, transparent 48%, #c8102e 48% 52%, transparent 52%), linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%), linear-gradient(0deg, transparent 34%, #fff 34% 66%, transparent 66%), linear-gradient(90deg, transparent 44%, #c8102e 44% 56%, transparent 56%), linear-gradient(0deg, transparent 41%, #c8102e 41% 59%, transparent 59%); }
 .mobile-menu { display: none; }
 
 .hero { position: relative; min-height: min(650px, calc(100vh - 114px)); display: flex; align-items: flex-end; overflow: hidden; color: white; }
