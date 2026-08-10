@@ -64,20 +64,19 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={url("/")}>Home</a>
-          <a href={url("/chi-siamo/")}>Chi siamo</a>
           <a href={url("/servizi/")}>Servizi</a>
           <a href={url("/progetti/")}>Progetti</a>
-          <a href={url("/come-lavoriamo/")}>Come lavoriamo</a>
+          <a href={url("/chi-siamo/")}>Chi siamo</a>
           <a href={url("/blog/")}>Blog</a>
         </nav>
         <a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a>
         <details className="mobile-menu">
           <summary aria-label="Apri il menu">Menu</summary>
           <nav aria-label="Navigazione mobile">
-            <a href={url("/chi-siamo/")}>Chi siamo</a>
+            <a href={url("/")}>Home</a>
             <a href={url("/servizi/")}>Servizi</a>
             <a href={url("/progetti/")}>Progetti</a>
-            <a href={url("/come-lavoriamo/")}>Come lavoriamo</a>
+            <a href={url("/chi-siamo/")}>Chi siamo</a>
             <a href={url("/blog/")}>Blog</a>
             <a href={url("/contatti/")}>Contatti</a>
           </nav>
