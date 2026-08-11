@@ -207,7 +207,8 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .article-grid strong { margin-top: 18px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
 .substack-box { margin: 0 7vw 9vw; padding: clamp(50px,7vw,95px); background: var(--green); color: white; }
 .substack-box h2 { max-width: 850px; }
-.substack-box > p:last-child { font-size: 18px; }
+.substack-box > p:not(.eyebrow) { font-size: 18px; }
+.substack-box .button { margin-top: 18px; }
 
 @media (max-width: 1180px) {
   .site-header { grid-template-columns: 270px 1fr auto; }
