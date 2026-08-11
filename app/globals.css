@@ -42,6 +42,7 @@ button, input, textarea, select { font: inherit; }
 .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; padding: 0 25px; border: 0; border-radius: 8px; background: var(--yellow); color: var(--ink); font-weight: 750; cursor: pointer; transition: transform .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-2px); background: #ffe474; }
 .button-small { min-height: 46px; padding: 0 20px; font-size: 13px; }
+.button-label-mobile { display: none; }
 .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 9px; }
 .header-actions > .button-small { white-space: nowrap; }
 .language-toggle { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; padding: 0; border: 1px solid rgba(29,48,42,.16); border-radius: 8px; background: white; cursor: pointer; }
@@ -261,6 +262,8 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .experience-badge strong { width: 37px; height: 37px; font-size: 15px; }
   .experience-badge small { font-size: 8px; }
   .header-actions > .button { display: none; }
+  .button-label-desktop { display: none; }
+  .button-label-mobile { display: inline; }
   .language-toggle { width: 42px; height: 42px; }
   .mobile-menu { order: initial; }
   .hero { min-height: 640px; align-items: flex-end; }

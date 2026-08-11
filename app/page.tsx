@@ -96,7 +96,7 @@ export default function Home() {
               Lucca e Livorno. Un referente diretto, un lavoro fatto a regola d’arte.
             </p>
             <div className="hero-actions">
-              <a className="button" href={url("/contatti/")}>Richiedi un preventivo</a>
+              <a className="button" href={url("/contatti/")}><span className="button-label-desktop">Richiedi un preventivo</span><span className="button-label-mobile">Richiedi un sopralluogo gratuito</span></a>
               <a className="text-link light-link" href={url("/progetti/")}>Guarda i lavori <span>↘</span></a>
             </div>
           </div>
