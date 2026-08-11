@@ -59,6 +59,7 @@ button, input, textarea, select { font: inherit; }
 
 .section { padding: clamp(72px, 7vw, 108px) max(5vw, calc((100vw - 1180px)/2)); }
 .intro { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(60px, 8vw, 115px); align-items: start; }
+#inizio .intro, #inizio .projects { background: var(--cream); }
 h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spacing: -.04em; font-weight: 650; }
 .intro-copy { padding-top: 36px; }
 .intro-copy p, .local-seo p { margin: 0 0 32px; color: var(--muted); font-size: 19px; line-height: 1.75; }
