@@ -58,6 +58,7 @@ export default function Home() {
 
       <div className="announcement">
         <span>La risposta professionale nell&apos;edilizia</span>
+        <LanguageSwitcher />
       </div>
 
       <header className="site-header">
@@ -72,7 +73,7 @@ export default function Home() {
           <a href={url("/chi-siamo/")}>Chi siamo</a>
           <a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
         </nav>
-        <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a><LanguageSwitcher /></div>
+        <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
         <MobileMenu />
       </header>
 
