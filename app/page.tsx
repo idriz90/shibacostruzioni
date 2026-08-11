@@ -5,6 +5,8 @@ import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { MobileMenu } from "./components/MobileMenu";
 import { DesktopNav } from "./components/DesktopNav";
+import { WebsiteJsonLd } from "./components/SeoJsonLd";
+import { SITE_URL } from "./seo";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -34,19 +36,29 @@ const services = [
 const schema = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
+  "@id": `${SITE_URL}/#impresa`,
   name: "Costruzioni Edili Shiba",
-  url: "https://shibacostruzioni.it",
+  legalName: "COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL & C. S.A.S.",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo-shiba-v2-400.png`,
+  image: `${SITE_URL}/og.png`,
+  description: "Impresa edile specializzata in ristrutturazioni, impermeabilizzazioni e interventi strutturali a Pisa e in Toscana.",
   telephone: "+393420926964",
   email: "info@shibacostruzioni.it",
   taxID: "02226750509",
+  foundingDate: "2016",
+  numberOfEmployees: 12,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Via Giacomo Brodolini 14",
     addressLocality: "San Giuliano Terme",
     addressRegion: "PI",
+    postalCode: "56017",
     addressCountry: "IT",
   },
   areaServed: ["Pisa", "Lucca", "Livorno", "San Giuliano Terme"],
+  contactPoint: { "@type": "ContactPoint", telephone: "+393420926964", email: "info@shibacostruzioni.it", contactType: "customer service", availableLanguage: ["Italian", "English"] },
+  knowsAbout: ["Ristrutturazioni", "Impermeabilizzazioni", "Tetti e facciate", "Consolidamento strutturale", "Edilizia commerciale"],
 };
 
 export default function Home() {
@@ -56,6 +68,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <WebsiteJsonLd />
 
       <div className="announcement">
         <span>La risposta professionale nell&apos;edilizia</span>
@@ -64,7 +77,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
-          <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
+          <img src={url("/images/logo-shiba-v2-400.png")} alt="Shiba Costruzioni" width="400" height="400" decoding="async" />
           <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>
         </a>
         <DesktopNav />
@@ -74,7 +87,7 @@ export default function Home() {
 
       <main id="inizio">
         <section className="hero">
-          <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Costruzioni Edili Shiba" />
+          <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Costruzioni Edili Shiba" width="1920" height="1077" fetchPriority="high" decoding="async" />
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow light">Costruiamo valore, proteggiamo ciò che conta</p>

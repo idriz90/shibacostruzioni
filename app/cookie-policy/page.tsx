@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = { title: "Cookie Policy", description: "Informazioni sugli strumenti tecnici utilizzati dal sito Costruzioni Edili Shiba." };
+export const metadata = pageMetadata("Cookie Policy", "Informazioni sugli strumenti tecnici utilizzati dal sito Costruzioni Edili Shiba.", "/cookie-policy/", false);
 
 export default function CookiePolicy() { return <><SiteHeader/><main><PageHero eyebrow="Navigazione trasparente" title="Cookie Policy" text="Questo sito non utilizza cookie analitici, pubblicitari o di profilazione. Ultimo aggiornamento: 10 agosto 2026."/><article className="legal-page content-section">
   <section><h2>Cosa utilizza il sito</h2><p>Il sito utilizza esclusivamente le risorse tecniche necessarie a mostrare le pagine, garantire la sicurezza e permettere la corretta navigazione. Non vengono installati cookie per analizzare il comportamento degli utenti, creare profili o mostrare pubblicità personalizzata.</p></section>

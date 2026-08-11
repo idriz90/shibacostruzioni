@@ -26,6 +26,7 @@ const translations: Record<string, string> = {
   "Nuova zona giorno": "New living area", "Spazi, impianti e superfici trasformati per una casa più luminosa.": "Spaces, systems and surfaces transformed into a brighter home.",
   "Prima": "Before", "Dopo": "After",
   "Una soluzione precisa per ogni edificio.": "The right solution for every building.",
+  "Servizi edili e ristrutturazioni a Pisa e in Toscana.": "Building and renovation services in Pisa and across Tuscany.",
   "Dal piccolo intervento alla ristrutturazione completa, affrontiamo ogni lavoro partendo dalle reali condizioni dell'immobile.": "From small repairs to complete renovations, every project starts with the building's actual condition.",
   "Appartamenti e ville": "Apartments and villas", "Comfort su misura": "Tailored comfort", "Protezione e valore": "Protection and value", "Contro acqua e umidità": "Against water and damp", "Sicurezza dell'edificio": "Building safety", "Continuità per l'attività": "Business continuity",
   "Demolizioni, distribuzione degli spazi, impianti, pavimenti, tinteggiature e finiture coordinati da un unico referente.": "Demolition, layouts, systems, floors, painting and finishes coordinated by one contact.",
@@ -147,7 +148,7 @@ export function LanguageSwitcher() {
 
   return <div className="language-switcher" role="group" aria-label="Seleziona la lingua" data-no-translate>
     <button className={`language-toggle${language === "en" ? " is-active" : ""}`} type="button" onClick={() => choose("en")} aria-label="Translate website into English" aria-pressed={language === "en"}>
-      <img className="flag-icon" src={`${basePath}/images/uk-flag.jpg`} alt="" aria-hidden="true" />
+      <img className="flag-icon" src={`${basePath}/images/uk-flag-small.jpg`} alt="" width="130" height="82" loading="lazy" decoding="async" aria-hidden="true" />
     </button>
     <button className={`language-toggle${language === "it" ? " is-active" : ""}`} type="button" onClick={() => choose("it")} aria-label="Traduci il sito in italiano" aria-pressed={language === "it"}>
       <span className="flag-icon flag-it" aria-hidden="true" />

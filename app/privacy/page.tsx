@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { PageHero, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = { title: "Informativa privacy", description: "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679." };
+export const metadata = pageMetadata("Informativa privacy", "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679.", "/privacy/", false);
 
 export default function Privacy() { return <><SiteHeader/><main><PageHero eyebrow="Trasparenza e dati personali" title="Informativa privacy" text="Informativa resa ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR). Ultimo aggiornamento: 10 agosto 2026."/><article className="legal-page content-section">
   <section><h2>1. Titolare del trattamento</h2><p>Il Titolare è <strong>COSTRUZIONI EDILI SHIBA DI SHIBA ERMAL &amp; C. S.A.S.</strong>, con sede in Via Giacomo Brodolini 14, 56017 San Giuliano Terme (PI), P. IVA e Codice Fiscale 02226750509, in persona del legale rappresentante Ermal Shiba.</p><p>Contatti: <a href="mailto:info@shibacostruzioni.it">info@shibacostruzioni.it</a> - PEC: <a href="mailto:ershiba@pec.it">ershiba@pec.it</a>.</p></section>

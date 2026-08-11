@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = { title: "Chi siamo", description: "Conosci Costruzioni Edili Shiba, impresa familiare attiva a Pisa, Lucca e Livorno." };
+export const metadata = pageMetadata("Impresa edile a Pisa: chi siamo", "Conosci Costruzioni Edili Shiba, impresa familiare con oltre dieci anni di esperienza e 12 addetti in Toscana.", "/chi-siamo/");
 
 export default function ChiSiamo() {
   return <><SiteHeader /><main><PageHero eyebrow="Chi siamo" title="Esperienza artigiana. Presenza diretta." text="Un’impresa familiare, una rete di professionisti fidati e un unico obiettivo: realizzare lavori solidi, trasparenti e capaci di durare." backgroundImage={siteUrl("/images/muratore-pisa.jpg")} />

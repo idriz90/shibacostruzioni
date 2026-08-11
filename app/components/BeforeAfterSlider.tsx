@@ -18,9 +18,9 @@ export function BeforeAfterSlider({ before, after, beforeAlt, afterAlt, initialP
 
   return (
     <div className="comparison" style={{ "--position": `${position}%` } as React.CSSProperties}>
-      <img className="comparison-image comparison-before" src={before} alt={beforeAlt} style={imagePosition ? { objectPosition: imagePosition } : undefined} />
+      <img className="comparison-image comparison-before" src={before} alt={beforeAlt} loading="lazy" decoding="async" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
       <div className="comparison-after" aria-hidden="true">
-        <img className="comparison-image" src={after} alt="" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
+        <img className="comparison-image" src={after} alt="" loading="lazy" decoding="async" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
       </div>
       <span className="comparison-label comparison-label-before">{beforeLabel}</span>
       <span className="comparison-label comparison-label-after">{afterLabel}</span>

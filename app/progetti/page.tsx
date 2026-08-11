@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { BreadcrumbJsonLd } from "../components/SeoJsonLd";
+import { pageMetadata } from "../seo";
 import { ProjectsContent } from "./ProjectsContent";
-export const metadata: Metadata = { title: "Progetti e lavori realizzati", description: "Guarda i lavori prima e dopo realizzati da Costruzioni Edili Shiba." };
-export default function Progetti(){return <><SiteHeader/><ProjectsContent/><SiteFooter/></>}
+export const metadata = pageMetadata("Ristrutturazioni e lavori realizzati a Pisa", "Guarda fotografie prima e dopo di bagni, zone giorno e camere ristrutturati da Costruzioni Edili Shiba.", "/progetti/");
+export default function Progetti(){return <><SiteHeader/><BreadcrumbJsonLd items={[["Home", "/"], ["Progetti", "/progetti/"]]}/><ProjectsContent/><SiteFooter/></>}

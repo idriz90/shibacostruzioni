@@ -11,7 +11,7 @@ export function SiteHeader() {
     <>
       <div className="announcement"><span>La risposta professionale nell&apos;edilizia</span><LanguageSwitcher /></div>
       <header className="site-header">
-        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br/>toscano</small></span></a>
+        <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2-400.png")} alt="Shiba Costruzioni" width="400" height="400" decoding="async" /><span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br/>toscano</small></span></a>
         <DesktopNav />
         <div className="header-actions"><a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
         <MobileMenu />

@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
 import { PageHero, siteUrl, SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { BreadcrumbJsonLd } from "../components/SeoJsonLd";
+import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = { title: "Servizi edili e ristrutturazioni", description: "Ristrutturazioni, bagni, tetti, facciate, impermeabilizzazioni e consolidamento strutturale a Pisa e in Toscana." };
+export const metadata = pageMetadata("Servizi edili e ristrutturazioni a Pisa", "Ristrutturazioni complete, bagni, tetti, facciate, impermeabilizzazioni e consolidamento strutturale a Pisa e in Toscana.", "/servizi/");
 const items = [
   ["Ristrutturazioni complete", "Appartamenti e ville", "Demolizioni, distribuzione degli spazi, impianti, pavimenti, tinteggiature e finiture coordinati da un unico referente."],
   ["Bagni e interni", "Comfort su misura", "Rifacimento completo del bagno, docce, rivestimenti, cartongesso e soluzioni personalizzate per gli ambienti interni."],
@@ -10,6 +11,6 @@ const items = [
   ["Consolidamento strutturale", "Sicurezza dell’edificio", "Riparazione di crepe, rinforzi, cordoli, stabilizzazione e miglioramento statico con il supporto di tecnici qualificati."],
   ["Edilizia commerciale", "Continuità per l’attività", "Manutenzioni, adeguamenti e interventi per negozi, magazzini e immobili a uso commerciale."],
 ];
-export default function Servizi() { return <><SiteHeader /><main><PageHero eyebrow="I nostri servizi" title="Una soluzione precisa per ogni edificio." text="Dal piccolo intervento alla ristrutturazione completa, affrontiamo ogni lavoro partendo dalle reali condizioni dell’immobile." backgroundImage={siteUrl("/images/tetto.jpg")} />
+export default function Servizi() { return <><SiteHeader /><main><BreadcrumbJsonLd items={[["Home", "/"], ["Servizi", "/servizi/"]]} /><PageHero eyebrow="I nostri servizi" title="Servizi edili e ristrutturazioni a Pisa e in Toscana." text="Dal piccolo intervento alla ristrutturazione completa, affrontiamo ogni lavoro partendo dalle reali condizioni dell’immobile." backgroundImage={siteUrl("/images/tetto.jpg")} />
   <section className="content-section"><div className="service-grid service-page-grid">{items.map(([title,kicker,text],i)=><article className="service-card" key={title}><span>{String(i+1).padStart(2,"0")}</span><p className="service-kicker">{kicker}</p><h2>{title}</h2><p>{text}</p></article>)}</div></section>
   </main><SiteFooter /></>; }
