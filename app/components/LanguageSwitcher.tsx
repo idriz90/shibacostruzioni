@@ -113,8 +113,12 @@ export function LanguageSwitcher() {
     translatePage(next);
   };
 
-  const nextLanguage = language === "it" ? "en" : "it";
-  return <button className="language-toggle" type="button" onClick={() => choose(nextLanguage)} aria-label={nextLanguage === "en" ? "Translate website into English" : "Traduci il sito in italiano"} data-no-translate>
-    {nextLanguage === "en" ? <img className="flag-icon" src={`${basePath}/images/uk-flag.jpg`} alt="" aria-hidden="true" /> : <span className="flag-icon flag-it" aria-hidden="true" />}
-  </button>;
+  return <div className="language-switcher" role="group" aria-label="Seleziona la lingua" data-no-translate>
+    <button className={`language-toggle${language === "en" ? " is-active" : ""}`} type="button" onClick={() => choose("en")} aria-label="Translate website into English" aria-pressed={language === "en"}>
+      <img className="flag-icon" src={`${basePath}/images/uk-flag.jpg`} alt="" aria-hidden="true" />
+    </button>
+    <button className={`language-toggle${language === "it" ? " is-active" : ""}`} type="button" onClick={() => choose("it")} aria-label="Traduci il sito in italiano" aria-pressed={language === "it"}>
+      <span className="flag-icon flag-it" aria-hidden="true" />
+    </button>
+  </div>;
 }
