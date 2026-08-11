@@ -127,9 +127,9 @@ export default function Home() {
 
           <article className="project-case home-featured-project">
             <div className="project-title project-title-no-number">
-              <div><h3>Nuova zona giorno</h3><p>Spazi, impianti e superfici trasformati per una casa più luminosa.</p></div>
+              <div><h3>Nuovo bagno</h3><p>Impianti, rivestimenti e superfici completamente rinnovati.</p></div>
             </div>
-            <BeforeAfterSlider before={url("/images/soggiorno-prima.jpeg")} after={url("/images/soggiorno-dopo.jpeg")} beforeAlt="Zona giorno durante la ristrutturazione" afterAlt="Zona giorno rinnovata con nuova cucina" initialPosition={30} />
+            <BeforeAfterSlider before={url("/images/home-bagno-prima-2.jpeg")} after={url("/images/home-bagno-dopo-2.jpeg")} beforeAlt="Bagno durante il rifacimento degli impianti" afterAlt="Bagno rinnovato con rivestimenti scuri" initialPosition={30} />
           </article>
         </section>
 
