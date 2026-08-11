@@ -127,9 +127,9 @@ export default function Home() {
 
           <article className="project-case home-featured-project">
             <div className="project-title project-title-no-number">
-              <div><h3>Nuovo bagno</h3><p>Impianti, rivestimenti e superfici completamente rinnovati.</p></div>
+              <div><h3>Facciata riqualificata</h3><p>Intonaci, protezione e colore rinnovano il valore dell’intero edificio.</p></div>
             </div>
-            <BeforeAfterSlider before={url("/images/home-bagno-prima-2.jpeg")} after={url("/images/home-bagno-dopo-2.jpeg")} beforeAlt="Bagno durante il rifacimento degli impianti" afterAlt="Bagno rinnovato con rivestimenti scuri" initialPosition={30} />
+            <BeforeAfterSlider before={url("/images/progetto-facciata-prima.jpeg")} after={url("/images/progetto-facciata-dopo.jpeg")} beforeAlt="Facciata durante i lavori con ponteggio" afterAlt="Facciata completata dopo la riqualificazione" initialPosition={30} />
           </article>
         </section>
 
