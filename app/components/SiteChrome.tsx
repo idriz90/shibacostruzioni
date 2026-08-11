@@ -40,7 +40,7 @@ export function SiteFooter() {
 
 export function FloatingContacts() {
   return <nav className="floating-contacts" aria-label="Contatti rapidi">
-    <a className="quick-call" href="tel:+393420926964" aria-label="Chiama Costruzioni Edili Shiba"><span className="icon-mobile" aria-hidden="true" /></a>
+    <a className="quick-call" href="tel:+393420926964" aria-label="Chiama Costruzioni Edili Shiba"><span className="icon-phone" aria-hidden="true" /></a>
     <a className="quick-email" href="mailto:info@shibacostruzioni.it" aria-label="Invia una email"><span className="icon-email" aria-hidden="true" /></a>
     <a className="quick-whatsapp" href="https://wa.me/393420926964" target="_blank" rel="noreferrer" aria-label="Scrivi su WhatsApp"><img className="icon-whatsapp" src={siteUrl("/images/whatsapp.svg")} alt="" aria-hidden="true" /></a>
   </nav>;

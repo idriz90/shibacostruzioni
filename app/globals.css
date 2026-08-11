@@ -140,9 +140,10 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .quick-call { background: #1784c2; }
 .quick-email { background: #fabe28; }
 .quick-whatsapp { background: #19bd68; }
-.icon-mobile { width: 19px; height: 31px; border: 2px solid white; border-radius: 4px; }
-.icon-mobile:before { content: ""; position: absolute; top: 3px; width: 7px; height: 1px; background: white; }
-.icon-mobile:after { content: ""; position: absolute; bottom: 3px; width: 3px; height: 3px; background: white; border-radius: 50%; }
+.icon-phone { width: 29px; height: 24px; border-left: 4px solid white; border-bottom: 4px solid white; border-radius: 0 0 0 15px; transform: rotate(-42deg); }
+.icon-phone:before, .icon-phone:after { content: ""; position: absolute; width: 11px; height: 7px; border: 3px solid white; border-radius: 4px; background: transparent; }
+.icon-phone:before { left: -8px; top: -4px; }
+.icon-phone:after { right: -5px; bottom: -8px; transform: rotate(90deg); }
 .icon-email { width: 30px; height: 22px; border: 2px solid white; border-radius: 3px; overflow: hidden; }
 .icon-email:before, .icon-email:after { content: ""; position: absolute; top: 4px; width: 20px; height: 2px; background: white; }
 .icon-email:before { left: -2px; transform: rotate(35deg); }
@@ -262,7 +263,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .cookie-notice { right: 14px; bottom: 80px; width: calc(100vw - 28px); padding: 20px; align-items: stretch; flex-direction: column; gap: 16px; }
   .floating-contacts { right: 12px; bottom: 18px; gap: 9px; }
   .floating-contacts a { width: 58px; height: 58px; }
-  .icon-mobile { width: 17px; height: 28px; }
+  .icon-phone { width: 26px; height: 22px; }
   .icon-email { width: 27px; height: 20px; }
   .icon-whatsapp { width: 31px; height: 31px; font-size: 19px; }
   .page-hero { min-height: 420px; padding: 82px 22px 58px; }
