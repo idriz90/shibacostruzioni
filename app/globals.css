@@ -265,6 +265,8 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .home-featured-project .comparison { width: 100%; height: auto !important; min-height: 0 !important; max-height: none !important; aspect-ratio: 16 / 9 !important; }
   .projects.content-section .comparison { height: auto; aspect-ratio: 4 / 5; }
   .project-title { grid-template-columns: 40px 1fr; }
+  .project-title.project-title-no-number { grid-template-columns: minmax(0, 1fr); }
+  .project-title.project-title-no-number > div { width: 100%; min-width: 0; }
   .steps article, .steps article + article { min-height: 230px; padding: 25px 0; border-right: 0; }
   .steps h3 { margin-top: 55px; }
   .contact-form { grid-template-columns: 1fr; padding: 26px 20px; }
