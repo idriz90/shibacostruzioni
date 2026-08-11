@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: `${publicBase}/images/logo-shiba-v2-400.png`,
-    shortcut: `${publicBase}/images/logo-shiba-v2-400.png`,
-    apple: `${publicBase}/images/logo-shiba-v2-400.png`,
+    icon: `${publicBase}/images/favicon-shiba-rounded.png`,
+    shortcut: `${publicBase}/images/favicon-shiba-rounded.png`,
+    apple: `${publicBase}/images/favicon-shiba-rounded.png`,
   },
 };
 

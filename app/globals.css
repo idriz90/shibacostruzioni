@@ -22,7 +22,7 @@ button, input, textarea, select { font: inherit; }
 .announcement .language-toggle:hover { background: rgba(255,255,255,.12); }
 .announcement .language-toggle.is-active { background: rgba(255,255,255,.18); opacity: 1; }
 .site-header { position: sticky; top: 0; z-index: 20; min-height: 78px; padding: 8px max(5vw, calc((100vw - 1180px)/2)); display: grid; grid-template-columns: 270px 1fr auto; align-items: center; gap: 24px; background: rgba(255,254,249,.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(24,33,30,.08); }
-.home-header { position: absolute; top: 0; left: 0; right: 0; background: linear-gradient(180deg, rgba(12,34,29,.58), rgba(12,34,29,.25)); border-bottom-color: rgba(255,255,255,.18); box-shadow: 0 10px 32px rgba(8,24,20,.12); backdrop-filter: blur(3px); }
+.home-header { position: absolute; top: 0; left: 0; right: 0; background: transparent; border-bottom-color: transparent; box-shadow: none; backdrop-filter: none; }
 .home-header .desktop-nav a, .home-header .experience-badge small { color: white; text-shadow: 0 1px 8px rgba(0,0,0,.28); }
 .home-header .desktop-nav a:hover, .home-header .desktop-nav a[aria-current="page"] { color: var(--yellow); }
 .home-header .desktop-nav a[aria-current="page"]::after { background: var(--yellow); }
