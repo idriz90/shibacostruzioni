@@ -64,7 +64,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
           <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
-          <span className="experience-badge"><strong>10+</strong><small>anni sul<br />territorio</small></span>
+          <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>
         </a>
         <nav className="desktop-nav" aria-label="Navigazione principale">
           <a href={url("/")}>Home</a>
@@ -118,7 +118,7 @@ export default function Home() {
             </div>
           </div>
 
-          <article className="project-case">
+          <article className="project-case home-featured-project">
             <div className="project-title project-title-no-number">
               <div><h3>Nuova zona giorno</h3><p>Spazi, impianti e superfici trasformati per una casa più luminosa.</p></div>
             </div>

@@ -262,7 +262,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .service-grid, .steps { grid-template-columns: 1fr; }
   .service-card { min-height: 240px; padding: 26px; }
   .comparison { height: 112vw; min-height: 0; max-height: 570px; }
-  .projects.section .comparison { height: clamp(185px, 56vw, 380px); min-height: 0; max-height: none; aspect-ratio: auto; }
+  .home-featured-project .comparison { width: 100%; height: auto !important; min-height: 0 !important; max-height: none !important; aspect-ratio: 16 / 9 !important; }
   .projects.content-section .comparison { height: auto; aspect-ratio: 4 / 5; }
   .project-title { grid-template-columns: 40px 1fr; }
   .steps article, .steps article + article { min-height: 230px; padding: 25px 0; border-right: 0; }
