@@ -8,7 +8,8 @@ const normalize = (path: string) => path.replace(/\/+$/, "") || "/";
 
 export function MobileMenu() {
   const pathname = usePathname();
-  const current = (path: string) => normalize(pathname) === normalize(url(path));
+  const route = basePath && pathname.startsWith(basePath) ? pathname.slice(basePath.length) || "/" : pathname;
+  const current = (path: string) => normalize(route) === normalize(path);
 
   return <details className="mobile-menu">
     <summary aria-label="Apri il menu"><span className="menu-icon" aria-hidden="true" /></summary>

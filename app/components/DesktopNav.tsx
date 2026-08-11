@@ -8,7 +8,8 @@ const normalize = (path: string) => path.replace(/\/+$/, "") || "/";
 
 export function DesktopNav() {
   const pathname = usePathname();
-  const current = (path: string) => normalize(pathname) === normalize(url(path));
+  const route = basePath && pathname.startsWith(basePath) ? pathname.slice(basePath.length) || "/" : pathname;
+  const current = (path: string) => normalize(route) === normalize(path);
 
   return <nav className="desktop-nav" aria-label="Navigazione principale">
     <a href={url("/")} aria-current={current("/") ? "page" : undefined}>Home</a>
