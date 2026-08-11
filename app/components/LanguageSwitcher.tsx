@@ -138,11 +138,14 @@ export function LanguageSwitcher() {
 
   useEffect(() => {
     const saved = localStorage.getItem("shiba-language") === "en" ? "en" : "it";
-    setLanguage(saved);
+    const timer = window.setTimeout(() => setLanguage(saved), 0);
     translatePage(saved);
     const observer = new MutationObserver(() => translatePage(localStorage.getItem("shiba-language") === "en" ? "en" : "it"));
     observer.observe(document.body, { childList: true, subtree: true });
-    return () => observer.disconnect();
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   const choose = (next: "it" | "en") => {
