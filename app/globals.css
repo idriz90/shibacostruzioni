@@ -177,11 +177,12 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 .values-grid h3 { margin: auto 0 18px; font-size: 30px; }
 .values-grid p { margin: 0; color: var(--muted); line-height: 1.6; }
 .values-flow { position: relative; }
-.values-flow article { position: relative; z-index: 1; }
-.values-flow article:not(:last-child)::after { content: ""; position: absolute; z-index: 5; top: 29px; right: -12px; width: 22px; height: 22px; border-top: 7px solid rgba(44,173,130,.35); border-right: 7px solid rgba(44,173,130,.35); transform: rotate(45deg); pointer-events: none; }
-.values-flow article:nth-child(2)::after { border-color: rgba(44,173,130,.62); }
-.values-flow article:nth-child(3)::after { border-color: rgba(44,173,130,.9); }
-.values-flow article:last-child > span { align-self: flex-start; margin-top: -8px; padding: 8px 25px 8px 17px; background: var(--green); color: white; clip-path: polygon(0 0, 72% 0, 100% 50%, 72% 100%, 0 100%, 18% 50%); }
+.values-flow article { position: relative; z-index: 1; overflow: visible; }
+.values-flow article > span { box-sizing: border-box; width: calc(100% + 60px); min-height: 62px; margin: -30px -30px 28px; padding: 20px 30px; display: block; color: white; background: #9bcdbb; clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%, 12% 50%); }
+.values-flow article:first-child > span { padding-left: 30px; background: #b7d9cc; clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%); }
+.values-flow article:nth-child(2) > span { background: #82c3ad; }
+.values-flow article:nth-child(3) > span { background: #58b792; }
+.values-flow article:last-child > span { background: var(--green); clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 12% 50%); }
 .cta-band { padding: 70px 7vw; display: flex; justify-content: space-between; align-items: center; gap: 35px; background: var(--yellow); }
 .cta-band h2 { max-width: 800px; font-size: clamp(38px,5vw,70px); }
 .cta-band .button { background: var(--ink); color: white; white-space: nowrap; }
@@ -272,7 +273,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
   .two-columns, .values-grid, .article-grid { grid-template-columns: 1fr; }
   .rich-copy { padding-top: 0; }
   .values-grid article { min-height: 260px; }
-  .values-flow article:not(:last-child)::after { top: auto; right: auto; bottom: -12px; left: 28px; transform: rotate(135deg); }
+  .values-flow article > span, .values-flow article:first-child > span, .values-flow article:last-child > span { width: calc(100% + 60px); min-height: 58px; margin: -30px -30px 32px; padding: 15px 30px 24px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%); }
   .cta-band { align-items: flex-start; flex-direction: column; padding: 58px 22px; }
   .project-cta { min-height: 140px; padding: 18px 22px; flex-direction: row; align-items: center; }
   .project-cta h2 { font-size: clamp(28px, 8vw, 36px); }
