@@ -1,6 +1,7 @@
 import { basePath } from "../basePath";
 import { CookieSettingsButton } from "./CookieNotice";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { MobileMenu } from "./MobileMenu";
 
 export const siteUrl = (path: string) => `${basePath}${path}`;
 
@@ -14,9 +15,7 @@ export function SiteHeader() {
           <a href={siteUrl("/")}>Home</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
         </nav>
         <div className="header-actions"><a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a><LanguageSwitcher /></div>
-        <details className="mobile-menu"><summary aria-label="Apri il menu">Menu</summary><nav aria-label="Navigazione mobile">
-          <a href={siteUrl("/")}>Home</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a><a href={siteUrl("/contatti/")}>Contatti</a>
-        </nav></details>
+        <MobileMenu />
       </header>
     </>
   );

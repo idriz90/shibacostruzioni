@@ -3,6 +3,7 @@ import { CookieSettingsButton } from "./components/CookieNotice";
 import { FloatingContacts } from "./components/SiteChrome";
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
+import { MobileMenu } from "./components/MobileMenu";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -72,17 +73,7 @@ export default function Home() {
           <a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
         </nav>
         <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a><LanguageSwitcher /></div>
-        <details className="mobile-menu">
-          <summary aria-label="Apri il menu">Menu</summary>
-          <nav aria-label="Navigazione mobile">
-            <a href={url("/")}>Home</a>
-            <a href={url("/servizi/")}>Servizi</a>
-            <a href={url("/progetti/")}>Progetti</a>
-            <a href={url("/chi-siamo/")}>Chi siamo</a>
-            <a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-            <a href={url("/contatti/")}>Contatti</a>
-          </nav>
-        </details>
+        <MobileMenu />
       </header>
 
       <main id="inizio">
