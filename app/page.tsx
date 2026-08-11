@@ -75,20 +75,19 @@ export default function Home() {
         <LanguageSwitcher />
       </div>
 
-      <header className="site-header home-header">
-        <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
-          <img src={url("/images/logo-shiba-v2-400.png")} alt="Shiba Costruzioni" width="400" height="400" decoding="async" />
-          <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>
-        </a>
-        <DesktopNav />
-        <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
-        <MobileMenu />
-      </header>
-
       <main id="inizio">
         <section className="hero">
           <img className="hero-image" src={url("/images/pisa-hero.jpg")} alt="Veduta di Pisa, territorio in cui opera Costruzioni Edili Shiba" width="1920" height="1077" fetchPriority="high" decoding="async" />
           <div className="hero-overlay" />
+          <header className="site-header home-header">
+            <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
+              <img src={url("/images/logo-shiba-v2-400.png")} alt="Shiba Costruzioni" width="400" height="400" decoding="async" />
+              <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>
+            </a>
+            <DesktopNav />
+            <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
+            <MobileMenu />
+          </header>
           <div className="hero-content">
             <p className="eyebrow light">Costruiamo valore, proteggiamo ciò che conta</p>
             <h1>La tua casa,<br />fatta per durare.</h1>
