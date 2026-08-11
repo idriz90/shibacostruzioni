@@ -75,7 +75,7 @@ export default function Home() {
         <LanguageSwitcher />
       </div>
 
-      <header className="site-header">
+      <header className="site-header home-header">
         <a className="brand" href="#inizio" aria-label="Shiba Costruzioni, torna all’inizio">
           <img src={url("/images/logo-shiba-v2-400.png")} alt="Shiba Costruzioni" width="400" height="400" decoding="async" />
           <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>

@@ -8,15 +8,19 @@ const siteUrl = (path: string) => `${basePath}${path}`;
 const STORAGE_KEY = "shiba-cookie-notice-seen";
 
 export function CookieNotice() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   useEffect(() => {
-    setVisible(localStorage.getItem(STORAGE_KEY) !== "1");
+    try {
+      setVisible(localStorage.getItem(STORAGE_KEY) !== "1");
+    } catch {
+      setVisible(true);
+    }
     const reopen = () => setVisible(true);
     window.addEventListener("shiba:cookie-notice", reopen);
     return () => window.removeEventListener("shiba:cookie-notice", reopen);
   }, []);
   if (!visible) return null;
-  return <aside className="cookie-notice" aria-label="Informativa cookie" aria-live="polite"><div><strong>Questo sito non usa cookie di profilazione.</strong><p>Utilizziamo solo strumenti tecnici indispensabili. Leggi la nostra <a href={siteUrl("/privacy/")}>informativa privacy</a> e la <a href={siteUrl("/cookie-policy/")}>cookie policy</a>.</p></div><button type="button" onClick={() => { localStorage.setItem(STORAGE_KEY, "1"); setVisible(false); }}>Ho capito</button></aside>;
+  return <aside className="cookie-notice" aria-label="Informativa cookie" aria-live="polite"><div><strong>Questo sito non usa cookie di profilazione.</strong><p>Utilizziamo solo strumenti tecnici indispensabili. Leggi la nostra <a href={siteUrl("/privacy/")}>informativa privacy</a> e la <a href={siteUrl("/cookie-policy/")}>cookie policy</a>.</p></div><button type="button" onClick={() => { try { localStorage.setItem(STORAGE_KEY, "1"); } catch {} setVisible(false); }}>Ho capito</button></aside>;
 }
 
 export function CookieSettingsButton() {

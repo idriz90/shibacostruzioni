@@ -22,6 +22,7 @@ button, input, textarea, select { font: inherit; }
 .announcement .language-toggle:hover { background: rgba(255,255,255,.12); }
 .announcement .language-toggle.is-active { background: rgba(255,255,255,.18); opacity: 1; }
 .site-header { position: sticky; top: 0; z-index: 20; min-height: 78px; padding: 8px max(5vw, calc((100vw - 1180px)/2)); display: grid; grid-template-columns: 270px 1fr auto; align-items: center; gap: 24px; background: rgba(255,254,249,.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(24,33,30,.08); }
+.home-header { margin-bottom: -78px; background: rgba(255,254,249,.91); box-shadow: 0 8px 28px rgba(15,35,31,.08); }
 .brand { display: flex; align-items: center; gap: 14px; }
 .brand img { width: 110px; height: 62px; object-fit: cover; object-position: center; border-radius: 12px; }
 .experience-badge { display: flex; align-items: center; gap: 8px; color: var(--ink); }
@@ -99,6 +100,8 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 60px); line-height: 1.04; letter-spa
 .comparison-range { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
 .comparison:has(.comparison-range:focus-visible) .comparison-divider span { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .projects.content-section .comparison { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
+.project-case-bedroom .comparison-before { filter: brightness(1.16) contrast(1.02); }
+.project-case-bedroom .comparison-after img { filter: brightness(1.24) contrast(1.01); }
 
 .method { background: #28443b; color: white; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.24); }
@@ -245,6 +248,7 @@ footer span, .footer-legal-data a { color: rgba(255,255,255,.62); }
 @media (max-width: 720px) {
   .announcement { justify-content: center; }
   .site-header { min-height: 72px; padding: 6px 20px; grid-template-columns: 1fr auto auto; gap: 8px; }
+  .home-header { margin-bottom: -72px; }
   .brand img { width: 96px; height: 54px; border-radius: 10px; }
   .experience-badge { gap: 6px; }
   .experience-badge strong { width: 37px; height: 37px; font-size: 15px; }
