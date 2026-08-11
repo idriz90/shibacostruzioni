@@ -4,6 +4,7 @@ import { FloatingContacts } from "./components/SiteChrome";
 import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { MobileMenu } from "./components/MobileMenu";
+import { DesktopNav } from "./components/DesktopNav";
 
 const url = (path: string) => `${basePath}${path}`;
 
@@ -66,13 +67,7 @@ export default function Home() {
           <img src={url("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" />
           <span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br />toscano</small></span>
         </a>
-        <nav className="desktop-nav" aria-label="Navigazione principale">
-          <a href={url("/")}>Home</a>
-          <a href={url("/servizi/")}>Servizi</a>
-          <a href={url("/progetti/")}>Progetti</a>
-          <a href={url("/chi-siamo/")}>Chi siamo</a>
-          <a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-        </nav>
+        <DesktopNav />
         <div className="header-actions"><a className="button button-small" href={url("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
         <MobileMenu />
       </header>

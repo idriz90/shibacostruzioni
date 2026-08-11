@@ -2,6 +2,7 @@ import { basePath } from "../basePath";
 import { CookieSettingsButton } from "./CookieNotice";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
+import { DesktopNav } from "./DesktopNav";
 
 export const siteUrl = (path: string) => `${basePath}${path}`;
 
@@ -11,9 +12,7 @@ export function SiteHeader() {
       <div className="announcement"><span>La risposta professionale nell&apos;edilizia</span><LanguageSwitcher /></div>
       <header className="site-header">
         <a className="brand" href={siteUrl("/")} aria-label="Shiba Costruzioni, torna alla Home"><img src={siteUrl("/images/logo-shiba-v2.png")} alt="Shiba Costruzioni" /><span className="experience-badge"><strong>10+</strong><small>anni sul territorio<br/>toscano</small></span></a>
-        <nav className="desktop-nav" aria-label="Navigazione principale">
-          <a href={siteUrl("/")}>Home</a><a href={siteUrl("/servizi/")}>Servizi</a><a href={siteUrl("/progetti/")}>Progetti</a><a href={siteUrl("/chi-siamo/")}>Chi siamo</a><a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-        </nav>
+        <DesktopNav />
         <div className="header-actions"><a className="button button-small" href={siteUrl("/contatti/")}>Richiedi un sopralluogo gratuito</a></div>
         <MobileMenu />
       </header>
