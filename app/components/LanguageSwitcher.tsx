@@ -5,7 +5,7 @@ import { basePath } from "../basePath";
 
 const translations: Record<string, string> = {
   "La risposta professionale nell'edilizia": "The professional answer in construction",
-  "anni sul territorio": "years in the area",
+  "anni sul territorio": "years serving", "toscano": "Tuscany",
   "Servizi": "Services", "Progetti": "Projects", "Chi siamo": "About us", "Contatti": "Contact",
   "Richiedi un sopralluogo gratuito": "Request a free site inspection", "Menu": "Menu",
   "Costruiamo valore, proteggiamo ciò che conta": "We build value and protect what matters",
