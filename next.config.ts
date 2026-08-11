@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const deployBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const nextConfig: NextConfig = {
   output: process.env.GITHUB_ACTIONS === "true" ? "export" : undefined,
-  basePath: process.env.GITHUB_ACTIONS === "true" ? "/shibacostruzioni" : "",
-  assetPrefix: process.env.GITHUB_ACTIONS === "true" ? "/shibacostruzioni" : "",
+  basePath: deployBasePath,
+  assetPrefix: deployBasePath,
   trailingSlash: true,
   images: { unoptimized: true },
 };
