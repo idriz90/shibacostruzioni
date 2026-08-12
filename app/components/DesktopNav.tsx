@@ -16,6 +16,6 @@ export function DesktopNav() {
     <a href={url("/servizi/")} aria-current={current("/servizi/") ? "page" : undefined}>Servizi</a>
     <a href={url("/progetti/")} aria-current={current("/progetti/") ? "page" : undefined}>Progetti</a>
     <a href={url("/chi-siamo/")} aria-current={current("/chi-siamo/") ? "page" : undefined}>Chi siamo</a>
-    <a href="https://substack.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+    <a href="https://substack.com/@shibacostruzioni" target="_blank" rel="noopener noreferrer">Blog</a>
   </nav>;
 }
